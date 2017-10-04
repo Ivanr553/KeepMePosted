@@ -1,0 +1,67 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+.App {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.Title {
+  font-size: 4em;
+  font-style: italic;
+  margin-top: 2.5vw; }
+
+.InputForm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 60vw;
+  margin-top: 5vw; }
+
+.main-input {
+  margin-top: 10vw;
+  width: 50vw;
+  height: 4.5vw;
+  border-radius: 50vw;
+  padding-left: 2.5vw; }
+
+.main-submit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 20vw;
+  max-height: 25vh;
+  font-size: 4em;
+  background-color: blue;
+  border: none;
+  cursor: pointer; }
