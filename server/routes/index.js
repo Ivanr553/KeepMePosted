@@ -28,8 +28,4 @@ router.post('/request', (req, res) => {
   console.log('requst went through')
 })
 
-router.get('/sent', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/sent.html'))
-})
-
 module.exports = router;
