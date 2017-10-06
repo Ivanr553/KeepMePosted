@@ -4,28 +4,64 @@ class InputForm extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+        class: null,
+        term: null,
+        phone: null
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleButtonClick = this.handleButtonClick.bind(this)
   }
 
-  componentWillMount() {
-    this.setState({
-      class: 'class',
-      term: 'term',
-      phone: 'phone',
-      mainButton: 'mainButton'
+  //Event handler to manage the input text
+  handleChange(event) {
+
+    //Assigning variables
+    let name = event.target.name
+    let value = event.target.value
+
+    //Changing the state to match input data
+    this.setState(
+      {
+          [name]: value
+      }
+    )
+  }
+
+  handleButtonClick(event) {
+
+    event.preventDefault()
+
+    let stateRequest = {
+      class: this.state.class,
+      term: this.state.term,
+      phone: this.state.phone
+    }
+
+    fetch('http://localhost:8000/request', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        request: stateRequest
+      })
     })
-  }
-
-  handleButtonClick(e) {
-    e.preventDefault()
+      .then(function(data) {
+        if(data.statusText === 'OK') {
+          window.open('http://localhost:8000/sent', '_self')
+        }
+      })
   }
 
   render() {
     return (
       <form className="InputForm">
-        <input className="main-input" placeholder={this.state.class} />
-        <input className="main-input" placeholder={this.state.term} />
-        <input className="main-input" key='phoneInput' placeholder={this.state.phone} />
+        <input className="main-input" placeholder='class' type='string' name='class' onChange={this.handleChange}/>
+        <input className="main-input" placeholder='term' type='string' name='term' onChange={this.handleChange}/>
+        <input className="main-input" key='phoneInput' placeholder='phone' type='number' name='phone' onChange={this.handleChange}/>
         <button className="main-submit" key='mainButton' onClick={(e) => this.handleButtonClick(e)} >Submit</button>
       </form>
     )

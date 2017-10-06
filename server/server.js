@@ -3,9 +3,16 @@ let express = require('express')
 let fs = require('fs')
 let path = require('path')
 let mongoose = require('mongoose')
+let cors = require('cors')
+let bodyParser = require('body-parser')
 
 //Initializing app
 let app = express()
+
+//MiddleWare
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //Imports
 let indexRoute = require('./routes/index')
@@ -31,8 +38,13 @@ app.use(function(err, req, res, next) {
 //Connect to database
 mongoose.connect(db.db)
 
+//Console logging connection
 mongoose.connection.on('connected', () => {
   console.log('Connected to database')
+})
+
+mongoose.connection.on('error', (error) => {
+  console.log('There was an error connecting to the database: ' + error)
 })
 
 module.exports = app

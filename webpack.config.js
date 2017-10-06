@@ -2,7 +2,10 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './client/components/app.js',
+  entry: {
+    app: './client/components/app.js',
+    sent: './client/components/sent.js'
+  },
   output: {
     path: path.join(__dirname, 'client'),
     filename: 'bundle.js'
