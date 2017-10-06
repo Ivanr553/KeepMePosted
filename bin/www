@@ -1,9 +1,9 @@
 var app = require('../server/server');
 
 //Port number
-var port = 8000;
+var port = process.env.PORT || 8000
 
 //Connection to port
 app.listen(port, function() {
-  console.log('App running on localhost:' + port);
+  console.log('App running on port:' + port);
 });

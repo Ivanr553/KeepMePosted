@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './client/components/app.js'
+  entry: './client/components/app.js',
   output: {
     path: path.join(__dirname, 'client'),
     filename: 'bundle.js'
@@ -21,14 +21,6 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       }
-      // {
-      //   test: /\.css$/,
-      //   loader: 'css-loader',
-      //   query: {
-      //     modules: true,
-      //     localIdentName: '[name]__[local]___[hash:base64:5]'
-      //   }
-      // }
     ]
   }
 }

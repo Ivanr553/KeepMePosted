@@ -39,7 +39,7 @@ class InputForm extends Component {
       phone: this.state.phone
     }
 
-    fetch('http://localhost:8000/request', {
+    fetch('/request', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
