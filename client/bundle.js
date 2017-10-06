@@ -21941,7 +21941,7 @@ var InputForm = function (_Component) {
         })
       }).then(function (data) {
         if (data.statusText === 'OK') {
-          window.open('http://localhost:8000/sent', '_self');
+          window.open('http://localhost:8000', '_self');
         }
       });
     }
