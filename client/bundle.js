@@ -360,6 +360,21 @@ module.exports = invariant;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(16);
+} else {
+  module.exports = __webpack_require__(17);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -451,21 +466,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(16);
-} else {
-  module.exports = __webpack_require__(17);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 5 */
@@ -961,7 +961,7 @@ module.exports = getActiveElement;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -973,11 +973,11 @@ var _styles = __webpack_require__(32);
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _Title = __webpack_require__(38);
+var _Title = __webpack_require__(37);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _InputForm = __webpack_require__(40);
+var _InputForm = __webpack_require__(38);
 
 var _InputForm2 = _interopRequireDefault(_InputForm);
 
@@ -1029,7 +1029,7 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
  This source code is licensed under the MIT license found in the
  LICENSE file in the root directory of this source tree.
 */
-var f=__webpack_require__(3),p=__webpack_require__(5);__webpack_require__(2);var r=__webpack_require__(1);
+var f=__webpack_require__(4),p=__webpack_require__(5);__webpack_require__(2);var r=__webpack_require__(1);
 function t(a){for(var b=arguments.length-1,d="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,e=0;e<b;e++)d+="\x26args[]\x3d"+encodeURIComponent(arguments[e+1]);b=Error(d+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var u={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function v(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}v.prototype.isReactComponent={};v.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?t("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};v.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function w(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}function x(){}x.prototype=v.prototype;var y=w.prototype=new x;y.constructor=w;f(y,v.prototype);y.isPureReactComponent=!0;function z(a,b,d){this.props=a;this.context=b;this.refs=p;this.updater=d||u}var A=z.prototype=new x;A.constructor=z;f(A,v.prototype);A.unstable_isAsyncReactComponent=!0;A.render=function(){return this.props.children};
@@ -1066,7 +1066,7 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var objectAssign$1 = __webpack_require__(3);
+var objectAssign$1 = __webpack_require__(4);
 var require$$0 = __webpack_require__(6);
 var emptyObject = __webpack_require__(5);
 var invariant = __webpack_require__(2);
@@ -2812,7 +2812,7 @@ if (process.env.NODE_ENV === 'production') {
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(4);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(3),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
+var aa=__webpack_require__(3);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -3137,10 +3137,10 @@ if (process.env.NODE_ENV !== "production") {
 
 'use strict';
 
-var react = __webpack_require__(4);
+var react = __webpack_require__(3);
 var invariant = __webpack_require__(2);
 var ExecutionEnvironment = __webpack_require__(9);
-var _assign = __webpack_require__(3);
+var _assign = __webpack_require__(4);
 var EventListener = __webpack_require__(10);
 var require$$0 = __webpack_require__(6);
 var hyphenateStyleName = __webpack_require__(23);
@@ -20616,7 +20616,7 @@ if (process.env.NODE_ENV !== 'production') {
 var emptyFunction = __webpack_require__(1);
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(6);
-var assign = __webpack_require__(3);
+var assign = __webpack_require__(4);
 
 var ReactPropTypesSecret = __webpack_require__(8);
 var checkPropTypes = __webpack_require__(7);
@@ -21254,7 +21254,7 @@ exports = module.exports = __webpack_require__(34)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  padding: 0;\n  margin: 0; }\n\n.App {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vw; }\n\n.main-input {\n  margin-top: 10vw;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw; }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: blue;\n  border: none;\n  cursor: pointer; }\n", ""]);
+exports.push([module.i, "body {\n  padding: 0;\n  margin: 0; }\n\n.App {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vw; }\n\n.main-input {\n  margin-top: 10vw;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw; }\n  @media screen and (min-width: 800px) {\n    .main-input {\n      margin-top: 5vh;\n      width: 25vw;\n      height: 3vh;\n      padding-left: 1vw;\n      outline: none; } }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: #4286f4;\n  border: none;\n  cursor: pointer; }\n  @media screen and (min-width: 800px) {\n    .main-submit {\n      position: inherit;\n      width: auto;\n      height: auto;\n      padding: 1.5%;\n      font-size: 1.5em;\n      margin-top: 5vh;\n      margin-bottom: 10vh;\n      border-radius: 10px;\n      outline: none; } }\n", ""]);
 
 // exports
 
@@ -21809,8 +21809,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 37 */,
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21822,7 +21821,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21860,8 +21859,7 @@ var Title = function (_Component) {
 exports.default = Title;
 
 /***/ }),
-/* 39 */,
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21873,7 +21871,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -21888,25 +21886,47 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var InputForm = function (_Component) {
   _inherits(InputForm, _Component);
 
-  function InputForm() {
+  function InputForm(props) {
     _classCallCheck(this, InputForm);
 
-    return _possibleConstructorReturn(this, (InputForm.__proto__ || Object.getPrototypeOf(InputForm)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (InputForm.__proto__ || Object.getPrototypeOf(InputForm)).call(this, props));
+
+    _this.state = {};
+    return _this;
   }
 
   _createClass(InputForm, [{
-    key: "render",
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.setState({
+        class: 'class',
+        term: 'term',
+        phone: 'phone',
+        mainButton: 'mainButton'
+      });
+    }
+  }, {
+    key: 'handleButtonClick',
+    value: function handleButtonClick(e) {
+      e.preventDefault();
+    }
+  }, {
+    key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
-        "form",
-        { className: "InputForm" },
-        _react2.default.createElement("input", { className: "main-input", defaultValue: "class" }),
-        _react2.default.createElement("input", { className: "main-input", defaultValue: "term" }),
-        _react2.default.createElement("input", { className: "main-input", defaultValue: "phone" }),
+        'form',
+        { className: 'InputForm' },
+        _react2.default.createElement('input', { className: 'main-input', placeholder: this.state.class }),
+        _react2.default.createElement('input', { className: 'main-input', placeholder: this.state.term }),
+        _react2.default.createElement('input', { className: 'main-input', key: 'phoneInput', placeholder: this.state.phone }),
         _react2.default.createElement(
-          "button",
-          { className: "main-submit" },
-          "Submit"
+          'button',
+          { className: 'main-submit', key: 'mainButton', onClick: function onClick(e) {
+              return _this2.handleButtonClick(e);
+            } },
+          'Submit'
         )
       );
     }

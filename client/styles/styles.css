@@ -53,6 +53,13 @@ body {
   height: 4.5vw;
   border-radius: 50vw;
   padding-left: 2.5vw; }
+  @media screen and (min-width: 800px) {
+    .main-input {
+      margin-top: 5vh;
+      width: 25vw;
+      height: 3vh;
+      padding-left: 1vw;
+      outline: none; } }
 
 .main-submit {
   position: fixed;
@@ -62,6 +69,17 @@ body {
   height: 20vw;
   max-height: 25vh;
   font-size: 4em;
-  background-color: blue;
+  background-color: #4286f4;
   border: none;
   cursor: pointer; }
+  @media screen and (min-width: 800px) {
+    .main-submit {
+      position: inherit;
+      width: auto;
+      height: auto;
+      padding: 1.5%;
+      font-size: 1.5em;
+      margin-top: 5vh;
+      margin-bottom: 10vh;
+      border-radius: 10px;
+      outline: none; } }
