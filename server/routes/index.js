@@ -4,9 +4,13 @@ const path = require('path')
 const mongoose = require('mongoose')
 const Request = require('../../models/kmpRequest')
 
-router.get('/', function(req, res) {
+router.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../../client/index.html'))
-})
+});
+
+// router.get('/', function(req, res) {
+//
+// })
 
 router.post('/request', (req, res) => {
 

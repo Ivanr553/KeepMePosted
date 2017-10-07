@@ -10,7 +10,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
-.App {
+.Main {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
