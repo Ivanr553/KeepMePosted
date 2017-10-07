@@ -25677,7 +25677,7 @@ exports = module.exports = __webpack_require__(79)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  padding: 0;\n  margin: 0; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vw; }\n\n.main-input {\n  margin-top: 10vw;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw; }\n  @media screen and (min-width: 800px) {\n    .main-input {\n      margin-top: 5vh;\n      width: 25vw;\n      height: 3vh;\n      padding-left: 1vw;\n      outline: none; } }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: #4286f4;\n  border: none;\n  cursor: pointer; }\n  @media screen and (min-width: 800px) {\n    .main-submit {\n      position: inherit;\n      width: auto;\n      height: auto;\n      padding: 1.5%;\n      font-size: 1.5em;\n      margin-top: 5vh;\n      margin-bottom: 10vh;\n      border-radius: 10px;\n      outline: none; } }\n", ""]);
+exports.push([module.i, "body {\n  padding: 0;\n  margin: 0; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vw; }\n\n.main-input {\n  margin-top: 10vw;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw; }\n  @media screen and (min-width: 800px) {\n    .main-input {\n      margin-top: 5vh;\n      width: 25vw;\n      height: 3vh;\n      padding-left: 1vw;\n      outline: none; } }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: #4286f4;\n  border: none;\n  cursor: pointer; }\n  @media screen and (min-width: 800px) {\n    .main-submit {\n      position: inherit;\n      width: auto;\n      height: auto;\n      padding: 1.5%;\n      font-size: 1.5em;\n      margin-top: 5vh;\n      margin-bottom: 10vh;\n      border-radius: 10px;\n      outline: none; } }\n\n.Sent {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 75vh; }\n\n.button-sent {\n  padding: 1.5%;\n  font-size: 1.8em;\n  font-style: italic;\n  border-radius: 5px;\n  background-color: #4fd66e;\n  color: white; }\n", ""]);
 
 // exports
 
@@ -26376,8 +26376,10 @@ var InputForm = function (_Component) {
     var _this = _possibleConstructorReturn(this, (InputForm.__proto__ || Object.getPrototypeOf(InputForm)).call(this, props));
 
     _this.state = {
-      class: null,
-      term: null,
+      subject: null,
+      year: null,
+      season: null,
+      crn: null,
       phone: null
     };
 
@@ -26407,8 +26409,10 @@ var InputForm = function (_Component) {
       event.preventDefault();
 
       var stateRequest = {
-        class: this.state.class,
-        term: this.state.term,
+        subject: this.state.subject,
+        year: this.state.year,
+        season: this.state.season,
+        crn: this.state.crn,
         phone: this.state.phone
       };
 
@@ -26435,8 +26439,10 @@ var InputForm = function (_Component) {
       return _react2.default.createElement(
         'form',
         { className: 'InputForm' },
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'class', type: 'string', name: 'class', onChange: this.handleChange }),
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'term', type: 'string', name: 'term', onChange: this.handleChange }),
+        _react2.default.createElement('input', { className: 'main-input', placeholder: 'subject', type: 'string', name: 'subject', onChange: this.handleChange }),
+        _react2.default.createElement('input', { className: 'main-input', placeholder: 'year', type: 'number', name: 'year', onChange: this.handleChange }),
+        _react2.default.createElement('input', { className: 'main-input', placeholder: 'season', type: 'string', name: 'season', onChange: this.handleChange }),
+        _react2.default.createElement('input', { className: 'main-input', key: 'crn', placeholder: 'crn', type: 'crn', name: 'crn', onChange: this.handleChange }),
         _react2.default.createElement('input', { className: 'main-input', key: 'phoneInput', placeholder: 'phone', type: 'number', name: 'phone', onChange: this.handleChange }),
         _react2.default.createElement(
           'button',
@@ -26489,15 +26495,15 @@ var Sent = function (_Component) {
   }
 
   _createClass(Sent, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "Sent" },
+        'div',
+        { className: 'Sent' },
         _react2.default.createElement(
-          "h1",
-          null,
-          "Sent"
+          'button',
+          { className: 'button-sent' },
+          'Your request has been sent!'
         )
       );
     }

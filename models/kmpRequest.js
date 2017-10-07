@@ -5,16 +5,28 @@ let Schema = mongoose.Schema;
 
 let RequestSchema = new Schema(
   {
-    class: {
+    subject: {
       type: String,
       required: true
     },
-    term: {
+    year: {
+      type: Number,
+      required: true
+    },
+    season: {
+      type: String,
+      required: true
+    },
+    crn: {
       type: String,
       required: true
     },
     phone: {
       type: Number,
+      required: true
+    },
+    date: {
+      type: String,
       required: true
     }
   },

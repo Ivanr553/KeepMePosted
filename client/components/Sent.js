@@ -4,7 +4,7 @@ class Sent extends Component {
   render() {
     return (
       <div className="Sent">
-        <h1>Sent</h1>
+        <button className='button-sent'>Your request has been sent!</button>
       </div>
     )
   }

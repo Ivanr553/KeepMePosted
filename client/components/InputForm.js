@@ -5,8 +5,10 @@ class InputForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-        class: null,
-        term: null,
+        subject: null,
+        year: null,
+        season: null,
+        crn: null,
         phone: null
     }
 
@@ -34,8 +36,10 @@ class InputForm extends Component {
     event.preventDefault()
 
     let stateRequest = {
-      class: this.state.class,
-      term: this.state.term,
+      subject: this.state.subject,
+      year: this.state.year,
+      season: this.state.season,
+      crn: this.state.crn,
       phone: this.state.phone
     }
 
@@ -59,9 +63,11 @@ class InputForm extends Component {
   render() {
     return (
       <form className="InputForm">
-        <input className="main-input" placeholder='class' type='string' name='class' onChange={this.handleChange}/>
-        <input className="main-input" placeholder='term' type='string' name='term' onChange={this.handleChange}/>
-        <input className="main-input" key='phoneInput' placeholder='phone' type='number' name='phone' onChange={this.handleChange}/>
+        <input className="main-input" placeholder='subject' type='string' name='subject' onChange={this.handleChange} />
+        <input className="main-input" placeholder='year' type='number' name='year' onChange={this.handleChange} />
+        <input className="main-input" placeholder='season' type='string' name='season' onChange={this.handleChange} />
+        <input className="main-input" key='crn' placeholder='crn' type='crn' name='crn' onChange={this.handleChange} />
+        <input className="main-input" key='phoneInput' placeholder='phone' type='number' name='phone' onChange={this.handleChange} />
         <button className="main-submit" key='mainButton' onClick={(e) => this.handleButtonClick(e)} >Submit</button>
       </form>
     )

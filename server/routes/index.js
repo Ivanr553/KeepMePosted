@@ -8,28 +8,28 @@ router.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../../client/index.html'))
 });
 
-// router.get('/', function(req, res) {
-//
-// })
-
 router.post('/request', (req, res) => {
 
-  //Assignign the body of the request received into a variable
+  //Assigning the body of the request received into a variable
   let request = req.body.request
 
   //Creating a new Request Document using the received request
   let newRequest = new Request({
-    class: request.class,
-    term: request.term,
-    phone: request.phone
+    subject: request.subject,
+    year: request.year,
+    season: request.season,
+    crn: request.crn,
+    phone: request.phone,
+    date: new Date()
   })
 
   //Saving this request into the database
   newRequest.save(newRequest)
 
+  //sent reponse to front end
   res.send()
 
-  console.log('requst went through')
+  console.log('request went through')
 })
 
 module.exports = router;
