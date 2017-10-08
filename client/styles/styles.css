@@ -35,7 +35,8 @@ input::-webkit-inner-spin-button {
 .Title {
   font-size: 4em;
   font-style: italic;
-  margin-top: 2.5vw; }
+  margin-top: 1.5vw;
+  opacity: 0.9; }
 
 .container {
   display: -webkit-box;
