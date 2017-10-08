@@ -1,6 +1,9 @@
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-position: center; }
 
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -34,6 +37,26 @@ input::-webkit-inner-spin-button {
   font-style: italic;
   margin-top: 2.5vw; }
 
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative; }
+
 .InputForm {
   display: -webkit-box;
   display: -webkit-flex;
@@ -53,31 +76,43 @@ input::-webkit-inner-spin-button {
   -ms-flex-pack: center;
   justify-content: center;
   width: 60vw;
-  margin-top: 5vw; }
+  margin-bottom: 5vw; }
 
 .main-select {
   width: 25vw;
+  height: 2.5vw;
   font-size: 1em;
   border-radius: 5px;
   outline: none;
-  margin-top: 5vh; }
+  margin-bottom: 5vh;
+  background-color: #ffdd82;
+  border: none;
+  text-indent: 5px; }
+
+.first-select {
+  margin-top: 10vh; }
 
 option {
-  text-align: center; }
+  text-align: center;
+  background-color: white; }
 
 .main-input {
-  margin-top: 10vw;
+  margin-top: 5vh;
   width: 50vw;
   height: 4.5vw;
   border-radius: 50vw;
-  padding-left: 2.5vw; }
+  padding-left: 2.5vw;
+  background-color: #ffdd82;
+  border: none;
+  text-align: center; }
   @media screen and (min-width: 800px) {
     .main-input {
-      margin-top: 5vh;
+      margin-bottom: 5vh;
       width: 25vw;
       height: 3vh;
       padding-left: 1vw;
-      outline: none; } }
+      outline: none;
+      font-size: 1em; } }
 
 .main-submit {
   position: fixed;
@@ -87,7 +122,7 @@ option {
   height: 20vw;
   max-height: 25vh;
   font-size: 4em;
-  background-color: #4286f4;
+  background-color: #72a1ff;
   border: none;
   cursor: pointer; }
   @media screen and (min-width: 800px) {
@@ -97,10 +132,16 @@ option {
       height: auto;
       padding: 1.5%;
       font-size: 1.5em;
-      margin-top: 5vh;
-      margin-bottom: 10vh;
       border-radius: 10px;
       outline: none; } }
+
+.alert-text {
+  font-weight: bold;
+  color: red;
+  font-size: 1.25em;
+  opacity: 0.9;
+  position: absolute;
+  top: 0; }
 
 .Sent {
   display: -webkit-box;

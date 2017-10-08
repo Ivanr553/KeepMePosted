@@ -1,6 +1,10 @@
 body
   padding: 0
   margin: 0
+  background-image: url('./images/background.jpg')
+  // background-color: rgb(82, 178, 120)
+  background-size: cover
+  background-position: center
 
 input::-webkit-outer-spin-button
     -webkit-appearance: none
@@ -24,36 +28,55 @@ input::-webkit-inner-spin-button
   margin-top: 2.5vw
 
 //Form styling
+.container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: relative
+
 .InputForm
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
   width: 60vw
-  margin-top: 5vw
+  margin-bottom: 5vw
 
 .main-select
   width: 25vw
+  height: 2.5vw
   font-size: 1em
   border-radius: 5px
   outline: none
-  margin-top: 5vh
+  margin-bottom: 5vh
+  background-color: rgb(255, 221, 130)
+  border: none
+  text-indent: 5px
+
+.first-select
+  margin-top: 10vh
 
 option
   text-align: center
+  background-color: white
 
 .main-input
-  margin-top: 10vw
+  margin-top: 5vh
   width: 50vw
   height: 4.5vw
   border-radius: 50vw
   padding-left: 2.5vw
+  background-color: rgb(255, 221, 130)
+  border: none
+  text-align: center
   @media screen and (min-width: 800px)
-    margin-top: 5vh
+    margin-bottom: 5vh
     width: 25vw
     height: 3vh
     padding-left: 1vw
     outline: none
+    font-size: 1em
 
 .main-submit
   position: fixed
@@ -63,7 +86,7 @@ option
   height: 20vw
   max-height: 25vh
   font-size: 4em
-  background-color: rgb(66, 134, 244)
+  background-color: rgb(114, 161, 255)
   border: none
   cursor: pointer
   @media screen and (min-width: 800px)
@@ -72,10 +95,16 @@ option
     height: auto
     padding: 1.5%
     font-size: 1.5em
-    margin-top: 5vh
-    margin-bottom: 10vh
     border-radius: 10px
     outline: none
+
+.alert-text
+  font-weight: bold
+  color: red
+  font-size: 1.25em
+  opacity: 0.9
+  position: absolute
+  top: 0
 
 //Sent route styling
 .Sent

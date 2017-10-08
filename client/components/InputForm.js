@@ -8,8 +8,8 @@ class InputForm extends Component {
         subject: 'AB',
         year: 2018,
         season: 'Spring',
-        crn: '',
-        phone: ''
+        crn: null,
+        phone: null
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -55,16 +55,27 @@ class InputForm extends Component {
     })
       .then(function(data) {
         if(data.statusText === 'OK') {
-          window.open('http://localhost:8000', '_self')
+          window.open('http://localhost:8000/sent', '_self')
         }
       })
   }
 
   render() {
+    let fillCrn = null
+    let fillPhone = null
+
+    if(this.state.crn == null || this.state.crn == '') {
+      fillCrn = <span className='alert-text'>*Please put in a crn number*</span>
+    }
+
+    if(this.state.phone == null || this.state.phone === '') {
+      fillPhone = <span className='alert-text'>*Please put in your phone number*</span>
+    }
+
     return (
       <form className="InputForm">
 
-        <select className="main-select" name='subject' onChange={this.handleChange} value={this.state.subject}>
+        <select className="main-select first-select" name='subject' onChange={this.handleChange} value={this.state.subject}>
             <option value="AB">AB Automotive Body Repair&amp;Paint
             </option><option value="AC">AC AirConditioning&amp;Refrigeration
             </option><option value="ACCT">ACCT Accounting
@@ -194,9 +205,15 @@ class InputForm extends Component {
           <option> Summer </option>
         </select>
 
+        <div className='container'>
+        {fillCrn}
         <input className="main-input" key='crn' placeholder='crn' type='crn' name='crn' onChange={this.handleChange} />
+        </div>
 
+        <div className='container'>
+        {fillPhone}
         <input className="main-input" key='phoneInput' placeholder='phone' type='number' name='phone' onChange={this.handleChange} />
+        </div>
 
         <button className="main-submit" key='mainButton' onClick={(e) => this.handleButtonClick(e)} >Submit</button>
       </form>

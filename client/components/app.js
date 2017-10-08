@@ -10,7 +10,7 @@ import Sent from './Sent.js'
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter style={{backgroundImage: 'url(this.state.image)'}}>
         <Switch>
           <Route path='/' exact component={Main} />
           <Route path="/sent" exact component={Sent} />

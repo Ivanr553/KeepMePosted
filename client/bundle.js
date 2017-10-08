@@ -2337,11 +2337,11 @@ var _styles = __webpack_require__(77);
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _Main = __webpack_require__(82);
+var _Main = __webpack_require__(83);
 
 var _Main2 = _interopRequireDefault(_Main);
 
-var _Sent = __webpack_require__(85);
+var _Sent = __webpack_require__(86);
 
 var _Sent2 = _interopRequireDefault(_Sent);
 
@@ -2367,7 +2367,7 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _reactRouterDom.BrowserRouter,
-        null,
+        { style: { backgroundImage: 'url(this.state.image)' } },
         _react2.default.createElement(
           _reactRouterDom.Switch,
           null,
@@ -25652,7 +25652,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(80)(content, options);
+var update = __webpack_require__(81)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -25677,7 +25677,7 @@ exports = module.exports = __webpack_require__(79)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  padding: 0;\n  margin: 0; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vw; }\n\n.main-select {\n  width: 25vw;\n  font-size: 1em;\n  border-radius: 5px;\n  outline: none;\n  margin-top: 5vh; }\n\noption {\n  text-align: center; }\n\n.main-input {\n  margin-top: 10vw;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw; }\n  @media screen and (min-width: 800px) {\n    .main-input {\n      margin-top: 5vh;\n      width: 25vw;\n      height: 3vh;\n      padding-left: 1vw;\n      outline: none; } }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: #4286f4;\n  border: none;\n  cursor: pointer; }\n  @media screen and (min-width: 800px) {\n    .main-submit {\n      position: inherit;\n      width: auto;\n      height: auto;\n      padding: 1.5%;\n      font-size: 1.5em;\n      margin-top: 5vh;\n      margin-bottom: 10vh;\n      border-radius: 10px;\n      outline: none; } }\n\n.Sent {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 75vh; }\n\n.button-sent {\n  padding: 1.5%;\n  font-size: 1.8em;\n  font-style: italic;\n  border-radius: 5px;\n  background-color: #4fd66e;\n  color: white; }\n", ""]);
+exports.push([module.i, "body {\n  padding: 0;\n  margin: 0;\n  background-image: url(" + __webpack_require__(80) + ");\n  background-size: cover;\n  background-position: center; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-bottom: 5vw; }\n\n.main-select {\n  width: 25vw;\n  height: 2.5vw;\n  font-size: 1em;\n  border-radius: 5px;\n  outline: none;\n  margin-bottom: 5vh;\n  background-color: #ffdd82;\n  border: none;\n  text-indent: 5px; }\n\n.first-select {\n  margin-top: 10vh; }\n\noption {\n  text-align: center;\n  background-color: white; }\n\n.main-input {\n  margin-top: 5vh;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw;\n  background-color: #ffdd82;\n  border: none;\n  text-align: center; }\n  @media screen and (min-width: 800px) {\n    .main-input {\n      margin-bottom: 5vh;\n      width: 25vw;\n      height: 3vh;\n      padding-left: 1vw;\n      outline: none;\n      font-size: 1em; } }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: #72a1ff;\n  border: none;\n  cursor: pointer; }\n  @media screen and (min-width: 800px) {\n    .main-submit {\n      position: inherit;\n      width: auto;\n      height: auto;\n      padding: 1.5%;\n      font-size: 1.5em;\n      border-radius: 10px;\n      outline: none; } }\n\n.alert-text {\n  font-weight: bold;\n  color: red;\n  font-size: 1.25em;\n  opacity: 0.9;\n  position: absolute;\n  top: 0; }\n\n.Sent {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 75vh; }\n\n.button-sent {\n  padding: 1.5%;\n  font-size: 1.8em;\n  font-style: italic;\n  border-radius: 5px;\n  background-color: #4fd66e;\n  color: white; }\n", ""]);
 
 // exports
 
@@ -25768,6 +25768,12 @@ function toComment(sourceMap) {
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "ec52fa1617a46e66bee0b696346bfb38.jpg";
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
@@ -25821,7 +25827,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(81);
+var	fixUrls = __webpack_require__(82);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -26137,7 +26143,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports) {
 
 
@@ -26232,7 +26238,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26248,11 +26254,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Title = __webpack_require__(83);
+var _Title = __webpack_require__(84);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _InputForm = __webpack_require__(84);
+var _InputForm = __webpack_require__(85);
 
 var _InputForm2 = _interopRequireDefault(_InputForm);
 
@@ -26291,7 +26297,7 @@ var Main = function (_Component) {
 exports.default = Main;
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26341,7 +26347,7 @@ var Title = function (_Component) {
 exports.default = Title;
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26379,8 +26385,8 @@ var InputForm = function (_Component) {
       subject: 'AB',
       year: 2018,
       season: 'Spring',
-      crn: '',
-      phone: ''
+      crn: null,
+      phone: null
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -26427,7 +26433,7 @@ var InputForm = function (_Component) {
         })
       }).then(function (data) {
         if (data.statusText === 'OK') {
-          window.open('http://localhost:8000', '_self');
+          window.open('http://localhost:8000/sent', '_self');
         }
       });
     }
@@ -26436,12 +26442,31 @@ var InputForm = function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      var fillCrn = null;
+      var fillPhone = null;
+
+      if (this.state.crn == null || this.state.crn == '') {
+        fillCrn = _react2.default.createElement(
+          'span',
+          { className: 'alert-text' },
+          '*Please put in a crn number*'
+        );
+      }
+
+      if (this.state.phone == null || this.state.phone === '') {
+        fillPhone = _react2.default.createElement(
+          'span',
+          { className: 'alert-text' },
+          '*Please put in your phone number*'
+        );
+      }
+
       return _react2.default.createElement(
         'form',
         { className: 'InputForm' },
         _react2.default.createElement(
           'select',
-          { className: 'main-select', name: 'subject', onChange: this.handleChange, value: this.state.subject },
+          { className: 'main-select first-select', name: 'subject', onChange: this.handleChange, value: this.state.subject },
           _react2.default.createElement(
             'option',
             { value: 'AB' },
@@ -27051,8 +27076,18 @@ var InputForm = function (_Component) {
             ' Summer '
           )
         ),
-        _react2.default.createElement('input', { className: 'main-input', key: 'crn', placeholder: 'crn', type: 'crn', name: 'crn', onChange: this.handleChange }),
-        _react2.default.createElement('input', { className: 'main-input', key: 'phoneInput', placeholder: 'phone', type: 'number', name: 'phone', onChange: this.handleChange }),
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          fillCrn,
+          _react2.default.createElement('input', { className: 'main-input', key: 'crn', placeholder: 'crn', type: 'crn', name: 'crn', onChange: this.handleChange })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          fillPhone,
+          _react2.default.createElement('input', { className: 'main-input', key: 'phoneInput', placeholder: 'phone', type: 'number', name: 'phone', onChange: this.handleChange })
+        ),
         _react2.default.createElement(
           'button',
           { className: 'main-submit', key: 'mainButton', onClick: function onClick(e) {
@@ -27070,7 +27105,7 @@ var InputForm = function (_Component) {
 exports.default = InputForm;
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27104,6 +27139,11 @@ var Sent = function (_Component) {
   }
 
   _createClass(Sent, [{
+    key: 'onButtonClick',
+    value: function onButtonClick() {
+      window.open('/', '_self');
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -27111,7 +27151,7 @@ var Sent = function (_Component) {
         { className: 'Sent' },
         _react2.default.createElement(
           'button',
-          { className: 'button-sent' },
+          { className: 'button-sent', onClick: this.onButtonClick },
           'Your request has been sent!'
         )
       );
