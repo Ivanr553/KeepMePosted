@@ -18,15 +18,11 @@ let RequestSchema = new Schema(
       required: true
     },
     crn: {
-      type: String,
+      type: Number,
       required: true
     },
     phone: {
       type: Number,
-      required: true
-    },
-    date: {
-      type: String,
       required: true
     }
   },

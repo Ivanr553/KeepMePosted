@@ -25677,7 +25677,7 @@ exports = module.exports = __webpack_require__(79)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  padding: 0;\n  margin: 0; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vw; }\n\n.main-input {\n  margin-top: 10vw;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw; }\n  @media screen and (min-width: 800px) {\n    .main-input {\n      margin-top: 5vh;\n      width: 25vw;\n      height: 3vh;\n      padding-left: 1vw;\n      outline: none; } }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: #4286f4;\n  border: none;\n  cursor: pointer; }\n  @media screen and (min-width: 800px) {\n    .main-submit {\n      position: inherit;\n      width: auto;\n      height: auto;\n      padding: 1.5%;\n      font-size: 1.5em;\n      margin-top: 5vh;\n      margin-bottom: 10vh;\n      border-radius: 10px;\n      outline: none; } }\n\n.Sent {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 75vh; }\n\n.button-sent {\n  padding: 1.5%;\n  font-size: 1.8em;\n  font-style: italic;\n  border-radius: 5px;\n  background-color: #4fd66e;\n  color: white; }\n", ""]);
+exports.push([module.i, "body {\n  padding: 0;\n  margin: 0; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 2.5vw; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vw; }\n\n.main-select {\n  width: 25vw;\n  font-size: 1em;\n  border-radius: 5px;\n  outline: none;\n  margin-top: 5vh; }\n\noption {\n  text-align: center; }\n\n.main-input {\n  margin-top: 10vw;\n  width: 50vw;\n  height: 4.5vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw; }\n  @media screen and (min-width: 800px) {\n    .main-input {\n      margin-top: 5vh;\n      width: 25vw;\n      height: 3vh;\n      padding-left: 1vw;\n      outline: none; } }\n\n.main-submit {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100vw;\n  height: 20vw;\n  max-height: 25vh;\n  font-size: 4em;\n  background-color: #4286f4;\n  border: none;\n  cursor: pointer; }\n  @media screen and (min-width: 800px) {\n    .main-submit {\n      position: inherit;\n      width: auto;\n      height: auto;\n      padding: 1.5%;\n      font-size: 1.5em;\n      margin-top: 5vh;\n      margin-bottom: 10vh;\n      border-radius: 10px;\n      outline: none; } }\n\n.Sent {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 75vh; }\n\n.button-sent {\n  padding: 1.5%;\n  font-size: 1.8em;\n  font-style: italic;\n  border-radius: 5px;\n  background-color: #4fd66e;\n  color: white; }\n", ""]);
 
 // exports
 
@@ -26376,11 +26376,11 @@ var InputForm = function (_Component) {
     var _this = _possibleConstructorReturn(this, (InputForm.__proto__ || Object.getPrototypeOf(InputForm)).call(this, props));
 
     _this.state = {
-      subject: null,
-      year: null,
-      season: null,
-      crn: null,
-      phone: null
+      subject: 'AB',
+      year: 2018,
+      season: 'Spring',
+      crn: '',
+      phone: ''
     };
 
     _this.handleChange = _this.handleChange.bind(_this);
@@ -26439,9 +26439,618 @@ var InputForm = function (_Component) {
       return _react2.default.createElement(
         'form',
         { className: 'InputForm' },
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'subject', type: 'string', name: 'subject', onChange: this.handleChange }),
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'year', type: 'number', name: 'year', onChange: this.handleChange }),
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'season', type: 'string', name: 'season', onChange: this.handleChange }),
+        _react2.default.createElement(
+          'select',
+          { className: 'main-select', name: 'subject', onChange: this.handleChange, value: this.state.subject },
+          _react2.default.createElement(
+            'option',
+            { value: 'AB' },
+            'AB Automotive Body Repair&Paint'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'AC' },
+            'AC AirConditioning&Refrigeration'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ACCT' },
+            'ACCT Accounting'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ACS' },
+            'ACS Automation & Control Systems'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ACT' },
+            'ACT Assistive Computer Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ADS' },
+            'ADS Addictive Disorders Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'AES' },
+            'AES American Ethnic Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'AG' },
+            'AG Agriculture'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ANAT' },
+            'ANAT Anatomy'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ANPH' },
+            'ANPH Anatomy/Physiology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ANSC' },
+            'ANSC Animal Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ANTH' },
+            'ANTH Anthropology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ARCH' },
+            'ARCH Architecture'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ART' },
+            'ART Art'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ARTH' },
+            'ARTH Art History'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ASL' },
+            'ASL American Sign Language'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'AST' },
+            'AST Astronomy'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'AT' },
+            'AT Automotive Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ATET' },
+            'ATET Applied Tech Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'AUTO' },
+            'AUTO Automotive'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'BIOL' },
+            'BIOL Biology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'BIOT' },
+            'BIOT Biotechnology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'BOT' },
+            'BOT Botany'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'BUS' },
+            'BUS Business'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CAOT' },
+            'CAOT Computer Apps/Office Tech'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CD' },
+            'CD Child Development'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CDL' },
+            'CDL Cognitively Diverse Learner'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CHEM' },
+            'CHEM Chemistry'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CHIN' },
+            'CHIN Chinese'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CHST' },
+            'CHST Chicano Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CIS' },
+            'CIS Computer Information Systems'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CJ' },
+            'CJ Criminal Justice'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CNIT' },
+            'CNIT Computer Networking/IT'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CNSE' },
+            'CNSE Computer Netwrk Sys. Engr. Prg'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'COL' },
+            'COL College'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'COMM' },
+            'COMM Communication Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'COT' },
+            'COT Cooperative Work Experience'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'COUN' },
+            'COUN Counseling'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CRM' },
+            'CRM Culinary Arts & Restaurant Mgt'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CS' },
+            'CS Computer Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'CT' },
+            'CT Construction Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'DA' },
+            'DA Dental Assistant'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'DANC' },
+            'DANC Dance'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'DH' },
+            'DH Dental Hygiene'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'DM' },
+            'DM Diesel Mechanics'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'DMS' },
+            'DMS Digital Media Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'DRFT' },
+            'DRFT Drafting'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'EAC' },
+            'EAC Educational Assistance Center'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'EATM' },
+            'EATM Exotic Animal Training Mgmt'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ECE' },
+            'ECE Early Childhood Education'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ECON' },
+            'ECON Economics'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'EDU' },
+            'EDU Education'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'EMT' },
+            'EMT Emergency Medical Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ENGL' },
+            'ENGL English'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ENGM' },
+            'ENGM English for Multilingual Stdts'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ENGR' },
+            'ENGR Engineering'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ENSC' },
+            'ENSC Environmental Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ESL' },
+            'ESL Engl as a second language'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ESRM' },
+            'ESRM Environmtl Sci & Resource Mgt'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'FILM' },
+            'FILM Film Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'FREN' },
+            'FREN French'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'FT' },
+            'FT Fire Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'FTVE' },
+            'FTVE Film, Television, & Elec Media'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'FTVM' },
+            'FTVM Film, Television, Media'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'GAME' },
+            'GAME Game Design'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'GEOG' },
+            'GEOG Geography'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'GEOL' },
+            'GEOL Geology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'GERM' },
+            'GERM German'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'GIS' },
+            'GIS Geographic Information Systems'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'GR' },
+            'GR Graphics'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'HED' },
+            'HED Health Education'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'HIST' },
+            'HIST History'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'HM' },
+            'HM Hospitality Management'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'HMSV' },
+            'HMSV Human Services'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'HS' },
+            'HS Health Sciences'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'HUM' },
+            'HUM Humanities'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ICA' },
+            'ICA Intercollegiate Athletics'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ITAL' },
+            'ITAL Italian'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'JAPN' },
+            'JAPN Japanese'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'JOUR' },
+            'JOUR Journalism'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'KIN' },
+            'KIN Kinesiology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'LIB' },
+            'LIB Library Instruction'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'LS' },
+            'LS Learning Skills'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'MATH' },
+            'MATH Mathematics'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'MICR' },
+            'MICR Microbiology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'MM' },
+            'MM Multimedia'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'MST' },
+            'MST Marine Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'MT' },
+            'MT Manufacturing Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'MUS' },
+            'MUS Music'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'NS' },
+            'NS Nursing Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'NTS' },
+            'NTS Nutritional Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'OPTI' },
+            'OPTI Optical Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PE' },
+            'PE Physical Education'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PG' },
+            'PG Personal Growth'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PHIL' },
+            'PHIL Philosophy'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PHOT' },
+            'PHOT Photography'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PHSC' },
+            'PHSC Physical Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PHSO' },
+            'PHSO Physiology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PHTC' },
+            'PHTC Commercial Photography'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PHYS' },
+            'PHYS Physics'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PLS' },
+            'PLS Paralegal Studies'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PM' },
+            'PM Paramedic'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'POLS' },
+            'POLS Political Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'PSY' },
+            'PSY Psychology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'RADT' },
+            'RADT Radiologic Technology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'SL' },
+            'SL Sign Language'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'SOC' },
+            'SOC Sociology'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'SPAN' },
+            'SPAN Spanish'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'SS' },
+            'SS Study Skills'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'THA' },
+            'THA Theatre Arts'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'THTR' },
+            'THTR Theatre'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'TTHA' },
+            'TTHA Technical Theatre'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'WEL' },
+            'WEL Welding'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'WS' },
+            'WS Water Science'
+          ),
+          _react2.default.createElement(
+            'option',
+            { value: 'ZOO' },
+            'ZOO Zoology'
+          )
+        ),
+        _react2.default.createElement(
+          'select',
+          { className: 'main-select', name: 'year', onChange: this.handleChange, value: this.state.year },
+          _react2.default.createElement(
+            'option',
+            null,
+            ' 2018 '
+          ),
+          _react2.default.createElement(
+            'option',
+            null,
+            ' 2017 '
+          )
+        ),
+        _react2.default.createElement(
+          'select',
+          { className: 'main-select', name: 'season', onChange: this.handleChange, value: this.state.season },
+          _react2.default.createElement(
+            'option',
+            null,
+            ' Fall '
+          ),
+          _react2.default.createElement(
+            'option',
+            null,
+            ' Spring '
+          ),
+          _react2.default.createElement(
+            'option',
+            null,
+            ' Summer '
+          )
+        ),
         _react2.default.createElement('input', { className: 'main-input', key: 'crn', placeholder: 'crn', type: 'crn', name: 'crn', onChange: this.handleChange }),
         _react2.default.createElement('input', { className: 'main-input', key: 'phoneInput', placeholder: 'phone', type: 'number', name: 'phone', onChange: this.handleChange }),
         _react2.default.createElement(

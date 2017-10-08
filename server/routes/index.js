@@ -18,9 +18,8 @@ router.post('/request', (req, res) => {
     subject: request.subject,
     year: request.year,
     season: request.season,
-    crn: request.crn,
-    phone: request.phone,
-    date: new Date()
+    crn: parseInt(request.crn),
+    phone: request.phone
   })
 
   //Saving this request into the database
