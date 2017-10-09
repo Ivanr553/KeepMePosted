@@ -26489,8 +26489,6 @@ var InputForm = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      console.log(window.location.href);
-
       //Assigning null values for conditional text
       var fillCrn = null;
       var fillPhone = null;
