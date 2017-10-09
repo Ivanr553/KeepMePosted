@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import Title from './Title.js'
-import InputForm from './InputForm.js'
+import Title from '../title/Title.js'
+import InputForm from '../inputForm/InputForm.js'
 
 class Main extends Component {
   render() {

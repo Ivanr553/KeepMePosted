@@ -43,11 +43,12 @@ input::-webkit-inner-spin-button
   align-items: center
   justify-content: center
   width: 60vw
-  margin-bottom: 5vw
+  margin-top: 5vh
+  // background-color: grey
 
 .main-select
-  width: 25vw
-  height: 2.5vw
+  width: 50vw
+  height: 5vw
   font-size: 1em
   border-radius: 5px
   outline: none
@@ -55,9 +56,12 @@ input::-webkit-inner-spin-button
   background-color: rgb(255, 221, 130)
   border: none
   text-indent: 5px
+  @media screen and (min-width: 800px)
+    width: 25vw
+    height: 2.5vw
 
 .first-select
-  margin-top: 10vh
+  margin-top: 5vh
 
 option
   text-align: center
@@ -66,39 +70,36 @@ option
 .main-input
   margin-top: 5vh
   width: 50vw
-  height: 4.5vw
+  height: 4vw
   border-radius: 50vw
   padding-left: 2.5vw
   background-color: rgb(255, 221, 130)
   border: none
   text-align: center
+  margin-bottom: 5vh
   @media screen and (min-width: 800px)
-    margin-bottom: 5vh
     width: 25vw
-    height: 3vh
+    height: 4vh
     padding-left: 1vw
     outline: none
     font-size: 1em
 
 .main-submit
-  position: fixed
-  bottom: 0
-  left: 0
-  width: 100vw
-  height: 20vw
-  max-height: 25vh
-  font-size: 4em
   background-color: rgb(114, 161, 255)
   border: none
   cursor: pointer
-  @media screen and (min-width: 800px)
-    position: inherit
-    width: auto
-    height: auto
-    padding: 1.5%
-    font-size: 1.5em
-    border-radius: 10px
-    outline: none
+  margin-bottom: 5vh
+  position: inherit
+  width: auto
+  height: auto
+  padding: 10px 12.5px 10px 12.5px
+  font-size: 1.5em
+  border-radius: 10px
+  outline: none
+  @media screen and (max-width: 800px)
+    width: 25vw
+    height: 10vw
+    font-size: 2em
 
 .alert-text
   font-weight: bold
