@@ -2341,7 +2341,7 @@ var _Main = __webpack_require__(83);
 
 var _Main2 = _interopRequireDefault(_Main);
 
-var _Sent = __webpack_require__(86);
+var _Sent = __webpack_require__(91);
 
 var _Sent2 = _interopRequireDefault(_Sent);
 
@@ -26368,23 +26368,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SubjectSelect = __webpack_require__(87);
+var _SubjectSelect = __webpack_require__(86);
 
 var _SubjectSelect2 = _interopRequireDefault(_SubjectSelect);
 
-var _YearSelect = __webpack_require__(88);
+var _YearSelect = __webpack_require__(87);
 
 var _YearSelect2 = _interopRequireDefault(_YearSelect);
 
-var _SeasonSelect = __webpack_require__(89);
+var _SeasonSelect = __webpack_require__(88);
 
 var _SeasonSelect2 = _interopRequireDefault(_SeasonSelect);
 
-var _CrnInput = __webpack_require__(90);
+var _CrnInput = __webpack_require__(89);
 
 var _CrnInput2 = _interopRequireDefault(_CrnInput);
 
-var _PhoneInput = __webpack_require__(91);
+var _PhoneInput = __webpack_require__(90);
 
 var _PhoneInput2 = _interopRequireDefault(_PhoneInput);
 
@@ -26411,8 +26411,9 @@ var InputForm = function (_Component) {
       subject: 'AB',
       year: 2018,
       season: 'Spring',
-      crn: null,
-      phone: null
+      crn: '',
+      phone: '',
+      showAlertText: false
 
       //Binding this to handlers
     };_this.onStateChange = _this.onStateChange.bind(_this);
@@ -26441,6 +26442,8 @@ var InputForm = function (_Component) {
     key: 'handleButtonClick',
     value: function handleButtonClick(event) {
 
+      var that = this;
+
       //Preventing defualt form submission for button
       event.preventDefault();
 
@@ -26467,13 +26470,15 @@ var InputForm = function (_Component) {
 
         var data = await response.json();
 
+        //Checking the response from the back end
         if (data.message === 'OK') {
 
           // Opening the 'sent' page to notify user of a successful entry
           window.open('http://localhost:8000/sent', '_self');
         } else {
 
-          console.log('oops! something broke!');
+          //Showing user error with input
+          that.setState({ showAlertText: true });
         }
       }
 
@@ -26484,10 +26489,24 @@ var InputForm = function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      //Assigning null values for conditional text
       var fillCrn = null;
       var fillPhone = null;
+      var invalidForm = null;
 
-      if (this.state.crn == null || this.state.crn == '') {
+      //Checking state for alert text display
+
+      //Alert text for incomplete crn length
+      if (this.state.crn != '' && this.state.crn.length < 5 && this.state.showAlertText) {
+        fillCrn = _react2.default.createElement(
+          'span',
+          { className: 'alert-text' },
+          '*Please put in a valid crn number*'
+        );
+      }
+
+      //Alert text for incomplete/missing crn after attempted submission
+      if (this.state.crn == '' && this.state.showAlertText) {
         fillCrn = _react2.default.createElement(
           'span',
           { className: 'alert-text' },
@@ -26495,7 +26514,17 @@ var InputForm = function (_Component) {
         );
       }
 
-      if (this.state.phone == null || this.state.phone === '') {
+      //Alert text for incomplete phone length
+      if (this.state.phone != '' && this.state.phone.length < 10 && this.state.showAlertText) {
+        fillCrn = _react2.default.createElement(
+          'span',
+          { className: 'alert-text' },
+          '*Please put in a valid phone number*'
+        );
+      }
+
+      //Alert text for incomplete/missing phone nmber after attempted submission
+      if (this.state.phone === '' && this.state.showAlertText) {
         fillPhone = _react2.default.createElement(
           'span',
           { className: 'alert-text' },
@@ -26503,10 +26532,24 @@ var InputForm = function (_Component) {
         );
       }
 
+      //Alert text for incomplete form submission
+      if ((this.state.phone === '' || this.state.crn == '') && this.state.showAlertText) {
+        invalidForm = _react2.default.createElement(
+          'span',
+          { className: 'alert-text' },
+          '*Fill in all form fields*'
+        );
+      }
+
       return _react2.default.createElement(
         'form',
         { className: 'InputForm' },
-        _react2.default.createElement(_SubjectSelect2.default, { subject: this.state.subject, onStateChange: this.onStateChange }),
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          invalidForm,
+          _react2.default.createElement(_SubjectSelect2.default, { subject: this.state.subject, onStateChange: this.onStateChange })
+        ),
         _react2.default.createElement(_YearSelect2.default, { year: this.state.year, onStateChange: this.onStateChange }),
         _react2.default.createElement(_SeasonSelect2.default, { season: this.state.season, onStateChange: this.onStateChange }),
         _react2.default.createElement(
@@ -26539,65 +26582,6 @@ exports.default = InputForm;
 
 /***/ }),
 /* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Sent = function (_Component) {
-  _inherits(Sent, _Component);
-
-  function Sent() {
-    _classCallCheck(this, Sent);
-
-    return _possibleConstructorReturn(this, (Sent.__proto__ || Object.getPrototypeOf(Sent)).apply(this, arguments));
-  }
-
-  _createClass(Sent, [{
-    key: 'onButtonClick',
-    value: function onButtonClick() {
-      window.open('/', '_self');
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'Sent' },
-        _react2.default.createElement(
-          'button',
-          { className: 'button-sent', onClick: this.onButtonClick },
-          'Your request has been sent!'
-        )
-      );
-    }
-  }]);
-
-  return Sent;
-}(_react.Component);
-
-exports.default = Sent;
-
-/***/ }),
-/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27229,7 +27213,7 @@ var SubjectSelect = function (_Component) {
 exports.default = SubjectSelect;
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27296,7 +27280,7 @@ var YearSelect = function (_Component) {
 exports.default = YearSelect;
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27368,7 +27352,7 @@ var SeasonSelect = function (_Component) {
 exports.default = SeasonSelect;
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27415,7 +27399,7 @@ var CrnInput = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'container' },
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'crn', type: 'crn', name: 'crn', onChange: this.handleChange })
+        _react2.default.createElement('input', { className: 'main-input', placeholder: 'crn', type: 'tel', maxLength: '5', name: 'crn', onChange: this.handleChange })
       );
     }
   }]);
@@ -27426,7 +27410,7 @@ var CrnInput = function (_Component) {
 exports.default = CrnInput;
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27473,7 +27457,7 @@ var PhoneInput = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'container' },
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'phone', type: 'number', name: 'phone', onChange: this.handleChange })
+        _react2.default.createElement('input', { className: 'main-input', placeholder: 'phone', type: 'tel', name: 'phone', maxLength: '10', onChange: this.handleChange })
       );
     }
   }]);
@@ -27482,6 +27466,65 @@ var PhoneInput = function (_Component) {
 }(_react.Component);
 
 exports.default = PhoneInput;
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Sent = function (_Component) {
+  _inherits(Sent, _Component);
+
+  function Sent() {
+    _classCallCheck(this, Sent);
+
+    return _possibleConstructorReturn(this, (Sent.__proto__ || Object.getPrototypeOf(Sent)).apply(this, arguments));
+  }
+
+  _createClass(Sent, [{
+    key: 'onButtonClick',
+    value: function onButtonClick() {
+      window.open('/', '_self');
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'Sent' },
+        _react2.default.createElement(
+          'button',
+          { className: 'button-sent', onClick: this.onButtonClick },
+          'Your request has been sent!'
+        )
+      );
+    }
+  }]);
+
+  return Sent;
+}(_react.Component);
+
+exports.default = Sent;
 
 /***/ }),
 /* 92 */

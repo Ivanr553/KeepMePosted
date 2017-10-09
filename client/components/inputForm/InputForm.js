@@ -16,8 +16,9 @@ class InputForm extends Component {
         subject: 'AB',
         year: 2018,
         season: 'Spring',
-        crn: null,
-        phone: null
+        crn: '',
+        phone: '',
+        showAlertText: false
     }
 
     //Binding this to handlers
@@ -35,13 +36,15 @@ class InputForm extends Component {
     //Changing the state to match input data
     this.setState(
       {
-          [name]: value
+        [name]: value
       }
     )
   }
 
   //Event handler for form submission
   handleButtonClick(event) {
+
+    let that = this
 
     //Preventing defualt form submission for button
     event.preventDefault()
@@ -70,13 +73,15 @@ class InputForm extends Component {
 
       let data = await response.json()
 
+      //Checking the response from the back end
       if(data.message === 'OK') {
 
-            // Opening the 'sent' page to notify user of a successful entry
-            window.open('http://localhost:8000/sent', '_self')
+        // Opening the 'sent' page to notify user of a successful entry
+        window.open('http://localhost:8000/sent', '_self')
       } else {
 
-        console.log('oops! something broke!')
+        //Showing user error with input
+        that.setState({showAlertText: true})
       }
     }
 
@@ -84,21 +89,46 @@ class InputForm extends Component {
   }
 
   render() {
+
+    //Assigning null values for conditional text
     let fillCrn = null
     let fillPhone = null
+    let invalidForm = null
 
-    if(this.state.crn == null || this.state.crn == '') {
+    //Checking state for alert text display
+
+    //Alert text for incomplete crn length
+    if(this.state.crn != '' && this.state.crn.length < 5 && this.state.showAlertText) {
+      fillCrn = <span className='alert-text'>*Please put in a valid crn number*</span>
+    }
+
+    //Alert text for incomplete/missing crn after attempted submission
+    if(this.state.crn == '' && this.state.showAlertText) {
       fillCrn = <span className='alert-text'>*Please put in a crn number*</span>
     }
 
-    if(this.state.phone == null || this.state.phone === '') {
+    //Alert text for incomplete phone length
+    if(this.state.phone != '' && this.state.phone.length < 10 && this.state.showAlertText) {
+      fillCrn = <span className='alert-text'>*Please put in a valid phone number*</span>
+    }
+
+    //Alert text for incomplete/missing phone nmber after attempted submission
+    if(this.state.phone === '' && this.state.showAlertText) {
       fillPhone = <span className='alert-text'>*Please put in a valid phone number*</span>
+    }
+
+    //Alert text for incomplete form submission
+    if(((this.state.phone === '') || (this.state.crn == '')) && this.state.showAlertText) {
+      invalidForm = <span className='alert-text'>*Fill in all form fields*</span>
     }
 
     return (
       <form className="InputForm">
 
+        <div className="container">
+        {invalidForm}
         <SubjectSelect subject={this.state.subject} onStateChange={this.onStateChange} />
+        </div>
 
         <YearSelect year={this.state.year} onStateChange={this.onStateChange} />
 
