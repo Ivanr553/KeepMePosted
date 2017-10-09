@@ -2337,13 +2337,17 @@ var _styles = __webpack_require__(77);
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _Main = __webpack_require__(101);
+var _Main = __webpack_require__(83);
 
 var _Main2 = _interopRequireDefault(_Main);
 
-var _Sent = __webpack_require__(102);
+var _Sent = __webpack_require__(86);
 
 var _Sent2 = _interopRequireDefault(_Sent);
+
+var _NotSent = __webpack_require__(92);
+
+var _NotSent2 = _interopRequireDefault(_NotSent);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2372,7 +2376,8 @@ var App = function (_Component) {
           _reactRouterDom.Switch,
           null,
           _react2.default.createElement(_reactRouterDom.Route, { path: '/', exact: true, component: _Main2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/sent', exact: true, component: _Sent2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/sent', exact: true, component: _Sent2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/error', exact: true, component: _NotSent2.default })
         )
       );
     }
@@ -26238,18 +26243,66 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */,
-/* 88 */,
-/* 89 */,
-/* 90 */,
-/* 91 */,
-/* 92 */,
-/* 93 */,
-/* 94 */
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Title = __webpack_require__(84);
+
+var _Title2 = _interopRequireDefault(_Title);
+
+var _InputForm = __webpack_require__(85);
+
+var _InputForm2 = _interopRequireDefault(_InputForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Main = function (_Component) {
+  _inherits(Main, _Component);
+
+  function Main() {
+    _classCallCheck(this, Main);
+
+    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+  }
+
+  _createClass(Main, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'Main' },
+        _react2.default.createElement(_Title2.default, null),
+        _react2.default.createElement(_InputForm2.default, null)
+      );
+    }
+  }]);
+
+  return Main;
+}(_react.Component);
+
+exports.default = Main;
+
+/***/ }),
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26299,7 +26352,7 @@ var Title = function (_Component) {
 exports.default = Title;
 
 /***/ }),
-/* 95 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26315,23 +26368,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SubjectSelect = __webpack_require__(96);
+var _SubjectSelect = __webpack_require__(87);
 
 var _SubjectSelect2 = _interopRequireDefault(_SubjectSelect);
 
-var _YearSelect = __webpack_require__(97);
+var _YearSelect = __webpack_require__(88);
 
 var _YearSelect2 = _interopRequireDefault(_YearSelect);
 
-var _SeasonSelect = __webpack_require__(98);
+var _SeasonSelect = __webpack_require__(89);
 
 var _SeasonSelect2 = _interopRequireDefault(_SeasonSelect);
 
-var _CrnInput = __webpack_require__(99);
+var _CrnInput = __webpack_require__(90);
 
 var _CrnInput2 = _interopRequireDefault(_CrnInput);
 
-var _PhoneInput = __webpack_require__(100);
+var _PhoneInput = __webpack_require__(91);
 
 var _PhoneInput2 = _interopRequireDefault(_PhoneInput);
 
@@ -26400,40 +26453,55 @@ var InputForm = function (_Component) {
         phone: this.state.phone
 
         //Sending the information to the database and waiting for a proper response
-      };fetch('/request', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          request: stateRequest
-        })
-      }).then(function (data) {
+      };async function postRequest() {
+        var response = await fetch('/request', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            request: stateRequest
+          })
+        });
 
-        //Checking to see if request went through
-        if (data.statusText === 'OK') {
+        var data = await response.json();
 
-          //Opoening the sent page to notify user of a successful entry
+        if (data.message === 'OK') {
+
+          // Opening the 'sent' page to notify user of a successful entry
           window.open('http://localhost:8000/sent', '_self');
+        } else {
+
+          console.log('oops! something broke!');
         }
-      });
+      }
+
+      postRequest();
     }
   }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
 
-      // let fillCrn = null
-      // let fillPhone = null
-      //
-      // if(this.state.crn == null || this.state.crn == '') {
-      //   fillCrn = <span className='alert-text'>*Please put in a crn number*</span>
-      // }
-      //
-      // if(this.state.phone == null || this.state.phone === '') {
-      //   fillPhone = <span className='alert-text'>*Please put in a valid phone number*</span>
-      // }
+      var fillCrn = null;
+      var fillPhone = null;
+
+      if (this.state.crn == null || this.state.crn == '') {
+        fillCrn = _react2.default.createElement(
+          'span',
+          { className: 'alert-text' },
+          '*Please put in a crn number*'
+        );
+      }
+
+      if (this.state.phone == null || this.state.phone === '') {
+        fillPhone = _react2.default.createElement(
+          'span',
+          { className: 'alert-text' },
+          '*Please put in a valid phone number*'
+        );
+      }
 
       return _react2.default.createElement(
         'form',
@@ -26441,20 +26509,25 @@ var InputForm = function (_Component) {
         _react2.default.createElement(_SubjectSelect2.default, { subject: this.state.subject, onStateChange: this.onStateChange }),
         _react2.default.createElement(_YearSelect2.default, { year: this.state.year, onStateChange: this.onStateChange }),
         _react2.default.createElement(_SeasonSelect2.default, { season: this.state.season, onStateChange: this.onStateChange }),
-        _react2.default.createElement(_CrnInput2.default, { crn: this.state.crn, onStateChange: this.onStateChange }),
-        _react2.default.createElement(_PhoneInput2.default, { phone: this.state.phone, onStateChange: this.onStateChange }),
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          fillCrn,
+          _react2.default.createElement(_CrnInput2.default, { crn: this.state.crn, onStateChange: this.onStateChange })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          fillPhone,
+          _react2.default.createElement(_PhoneInput2.default, { phone: this.state.phone, onStateChange: this.onStateChange })
+        ),
         _react2.default.createElement(
           'button',
           { className: 'main-submit', onClick: function onClick(e) {
               return _this2.handleButtonClick(e);
             } },
           'Submit'
-        ),
-        this.state.subject,
-        this.state.year,
-        this.state.season,
-        this.state.crn,
-        this.state.phone
+        )
       );
     }
   }]);
@@ -26465,7 +26538,66 @@ var InputForm = function (_Component) {
 exports.default = InputForm;
 
 /***/ }),
-/* 96 */
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Sent = function (_Component) {
+  _inherits(Sent, _Component);
+
+  function Sent() {
+    _classCallCheck(this, Sent);
+
+    return _possibleConstructorReturn(this, (Sent.__proto__ || Object.getPrototypeOf(Sent)).apply(this, arguments));
+  }
+
+  _createClass(Sent, [{
+    key: 'onButtonClick',
+    value: function onButtonClick() {
+      window.open('/', '_self');
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'Sent' },
+        _react2.default.createElement(
+          'button',
+          { className: 'button-sent', onClick: this.onButtonClick },
+          'Your request has been sent!'
+        )
+      );
+    }
+  }]);
+
+  return Sent;
+}(_react.Component);
+
+exports.default = Sent;
+
+/***/ }),
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27097,7 +27229,7 @@ var SubjectSelect = function (_Component) {
 exports.default = SubjectSelect;
 
 /***/ }),
-/* 97 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27164,7 +27296,7 @@ var YearSelect = function (_Component) {
 exports.default = YearSelect;
 
 /***/ }),
-/* 98 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27236,7 +27368,7 @@ var SeasonSelect = function (_Component) {
 exports.default = SeasonSelect;
 
 /***/ }),
-/* 99 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27294,7 +27426,7 @@ var CrnInput = function (_Component) {
 exports.default = CrnInput;
 
 /***/ }),
-/* 100 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27352,66 +27484,7 @@ var PhoneInput = function (_Component) {
 exports.default = PhoneInput;
 
 /***/ }),
-/* 101 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Title = __webpack_require__(94);
-
-var _Title2 = _interopRequireDefault(_Title);
-
-var _InputForm = __webpack_require__(95);
-
-var _InputForm2 = _interopRequireDefault(_InputForm);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Main = function (_Component) {
-  _inherits(Main, _Component);
-
-  function Main() {
-    _classCallCheck(this, Main);
-
-    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
-  }
-
-  _createClass(Main, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'Main' },
-        _react2.default.createElement(_Title2.default, null),
-        _react2.default.createElement(_InputForm2.default, null)
-      );
-    }
-  }]);
-
-  return Main;
-}(_react.Component);
-
-exports.default = Main;
-
-/***/ }),
-/* 102 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27435,39 +27508,30 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Sent = function (_Component) {
-  _inherits(Sent, _Component);
+var NotSent = function (_Component) {
+  _inherits(NotSent, _Component);
 
-  function Sent() {
-    _classCallCheck(this, Sent);
+  function NotSent(props) {
+    _classCallCheck(this, NotSent);
 
-    return _possibleConstructorReturn(this, (Sent.__proto__ || Object.getPrototypeOf(Sent)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (NotSent.__proto__ || Object.getPrototypeOf(NotSent)).call(this, props));
   }
 
-  _createClass(Sent, [{
-    key: 'onButtonClick',
-    value: function onButtonClick() {
-      window.open('/', '_self');
-    }
-  }, {
-    key: 'render',
+  _createClass(NotSent, [{
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'Sent' },
-        _react2.default.createElement(
-          'button',
-          { className: 'button-sent', onClick: this.onButtonClick },
-          'Your request has been sent!'
-        )
+        "div",
+        { className: "NotSent" },
+        "Something broke!"
       );
     }
   }]);
 
-  return Sent;
+  return NotSent;
 }(_react.Component);
 
-exports.default = Sent;
+exports.default = NotSent;
 
 /***/ })
 /******/ ]);

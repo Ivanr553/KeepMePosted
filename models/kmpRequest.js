@@ -33,7 +33,7 @@ let RequestSchema = new Schema(
 
 const Request = module.exports = mongoose.model("Request", RequestSchema);
 
-module.exports.saveRequest = function(input) {
+module.exports.saveRequest = function(input, err) {
   input.save(input, (err) => {
     if (err) throw err;
     console.log('Request saved')

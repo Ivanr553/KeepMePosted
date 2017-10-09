@@ -23,12 +23,20 @@ router.post('/request', (req, res) => {
   })
 
   //Saving this request into the database
-  newRequest.save(newRequest)
+  newRequest.save(newRequest, (err) => {
+    if(err){
 
-  //sent reponse to front end
-  res.send()
+      //Logging error and sending error status
+      console.log(err)
+      return res.status(500).send({message: 'something broke!'})
+    } else {
 
-  console.log('request went through')
+      //sent reponse to front end
+      console.log('no errors with data entry')
+      return res.send({message: 'all good!'})
+    }
+  })
+
 })
 
 module.exports = router;

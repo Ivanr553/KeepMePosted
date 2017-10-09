@@ -56,38 +56,44 @@ class InputForm extends Component {
     }
 
     //Sending the information to the database and waiting for a proper response
-    fetch('/request', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        request: stateRequest
+    async function postRequest() {
+      const response = await fetch('/request', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          request: stateRequest
+        })
       })
-    })
-      .then(function(data) {
 
-        //Checking to see if request went through
-        if(data.statusText === 'OK') {
+      let data = await response.json()
 
-          //Opoening the sent page to notify user of a successful entry
-          window.open('http://localhost:8000/sent', '_self')
-        }
-      })
+      if(data.message === 'OK') {
+
+            // Opening the 'sent' page to notify user of a successful entry
+            window.open('http://localhost:8000/sent', '_self')
+      } else {
+
+        console.log('oops! something broke!')
+      }
+    }
+
+    postRequest()
   }
 
   render() {
-    // let fillCrn = null
-    // let fillPhone = null
-    //
-    // if(this.state.crn == null || this.state.crn == '') {
-    //   fillCrn = <span className='alert-text'>*Please put in a crn number*</span>
-    // }
-    //
-    // if(this.state.phone == null || this.state.phone === '') {
-    //   fillPhone = <span className='alert-text'>*Please put in a valid phone number*</span>
-    // }
+    let fillCrn = null
+    let fillPhone = null
+
+    if(this.state.crn == null || this.state.crn == '') {
+      fillCrn = <span className='alert-text'>*Please put in a crn number*</span>
+    }
+
+    if(this.state.phone == null || this.state.phone === '') {
+      fillPhone = <span className='alert-text'>*Please put in a valid phone number*</span>
+    }
 
     return (
       <form className="InputForm">
@@ -98,16 +104,17 @@ class InputForm extends Component {
 
         <SeasonSelect season={this.state.season} onStateChange={this.onStateChange} />
 
+        <div className="container">
+        {fillCrn}
         <CrnInput crn={this.state.crn} onStateChange={this.onStateChange} />
+        </div>
 
+        <div className="container">
+        {fillPhone}
         <PhoneInput phone={this.state.phone} onStateChange={this.onStateChange} />
+        </div>
 
         <button className="main-submit" onClick={(e) => this.handleButtonClick(e)} >Submit</button>
-        {this.state.subject}
-        {this.state.year}
-        {this.state.season}
-        {this.state.crn}
-        {this.state.phone}
       </form>
     )
   }
