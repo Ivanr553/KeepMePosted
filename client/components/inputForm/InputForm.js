@@ -77,7 +77,7 @@ class InputForm extends Component {
       if(data.message == 'OK') {
 
         // Opening the 'sent' page to notify user of a successful entry
-        window.open('/sent', '_self')
+        window.open('https://keep-me-posted.herokuapp.com/sent', '_self')
       } else {
 
         //Showing user error with input
@@ -89,6 +89,8 @@ class InputForm extends Component {
   }
 
   render() {
+
+    console.log(window.location.href)
 
     //Assigning null values for conditional text
     let fillCrn = null

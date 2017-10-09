@@ -26471,10 +26471,10 @@ var InputForm = function (_Component) {
         var data = await response.json();
 
         //Checking the response from the back end
-        if (data.message === 'OK') {
+        if (data.message == 'OK') {
 
           // Opening the 'sent' page to notify user of a successful entry
-          window.open('http://localhost:8000/sent', '_self');
+          window.open('https://keep-me-posted.herokuapp.com/sent', '_self');
         } else {
 
           //Showing user error with input
@@ -26488,6 +26488,8 @@ var InputForm = function (_Component) {
     key: 'render',
     value: function render() {
       var _this2 = this;
+
+      console.log(window.location.href);
 
       //Assigning null values for conditional text
       var fillCrn = null;
