@@ -77,7 +77,7 @@ class InputForm extends Component {
       if(data.message === 'OK') {
 
         // Opening the 'sent' page to notify user of a successful entry
-        window.open('http://localhost:8000/sent', '_self')
+        window.open('/sent', '_self')
       } else {
 
         //Showing user error with input
