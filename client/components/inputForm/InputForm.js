@@ -90,8 +90,6 @@ class InputForm extends Component {
 
   render() {
 
-    console.log(window.location.href)
-
     //Assigning null values for conditional text
     let fillCrn = null
     let fillPhone = null
