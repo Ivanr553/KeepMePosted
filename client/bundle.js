@@ -26516,7 +26516,7 @@ var InputForm = function (_Component) {
 
       //Alert text for incomplete phone length
       if (this.state.phone != '' && this.state.phone.length < 10 && this.state.showAlertText) {
-        fillCrn = _react2.default.createElement(
+        fillPhone = _react2.default.createElement(
           'span',
           { className: 'alert-text' },
           '*Please put in a valid phone number*'

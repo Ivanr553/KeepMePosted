@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node bin/www",
-    "webpack": "webpack --watch",
+    "webpack": "webpack",
+    "webpackWatch": "webpack --watch",
     "serve": "nodemon bin/www",
-    "dev": "npm-run-all --parallel webpack serve"
+    "dev": "npm-run-all --parallel webpackWatch serve"
   },
   "author": "Ivan",
   "license": "MIT",

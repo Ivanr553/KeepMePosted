@@ -109,7 +109,7 @@ class InputForm extends Component {
 
     //Alert text for incomplete phone length
     if(this.state.phone != '' && this.state.phone.length < 10 && this.state.showAlertText) {
-      fillCrn = <span className='alert-text'>*Please put in a valid phone number*</span>
+      fillPhone = <span className='alert-text'>*Please put in a valid phone number*</span>
     }
 
     //Alert text for incomplete/missing phone nmber after attempted submission
