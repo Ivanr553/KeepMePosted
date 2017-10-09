@@ -26474,7 +26474,7 @@ var InputForm = function (_Component) {
         if (data.message == 'OK') {
 
           // Opening the 'sent' page to notify user of a successful entry
-          window.open('https://keep-me-posted.herokuapp.com/sent', '_self');
+          window.open(window.location.href + 'sent', '_self');
         } else {
 
           //Showing user error with input
