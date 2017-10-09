@@ -74,7 +74,7 @@ class InputForm extends Component {
       let data = await response.json()
 
       //Checking the response from the back end
-      if(data.message === 'OK') {
+      if(data.message == 'OK') {
 
         // Opening the 'sent' page to notify user of a successful entry
         window.open('/sent', '_self')

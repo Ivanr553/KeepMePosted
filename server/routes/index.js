@@ -28,12 +28,12 @@ router.post('/request', (req, res) => {
 
       //Logging error and sending error status
       console.log(err)
-      return res.status(500).send({message: 'something broke!'})
+      return res.status(500).send({message: 'ERROR'})
     } else {
 
       //sent reponse to front end
       console.log('no errors with data entry')
-      return res.send({message: 'all good!'})
+      return res.send({message: 'OK'})
     }
   })
 
