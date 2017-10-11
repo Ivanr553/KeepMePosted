@@ -58,6 +58,16 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   position: relative; }
 
+@media screen and (min-width: 1000px) {
+  .container-right {
+    margin-left: 3.5vw; } }
+
+@media screen and (min-width: 1000px) {
+  .form-container {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 7.5vh;
+    border-radius: 10px; } }
+
 .InputForm {
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,6 +88,20 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   width: 60vw;
   margin-top: 5vh; }
+  @media screen and (min-width: 1000px) {
+    .InputForm {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
+
+.form-titles {
+  color: #dcdcda;
+  font-size: 1.3em;
+  width: 100%;
+  text-indent: 15px;
+  margin-bottom: 5px; }
 
 .main-select {
   width: 50vw;
@@ -89,20 +113,16 @@ input::-webkit-inner-spin-button {
   background-color: #ffdd82;
   border: none;
   text-indent: 5px; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
     .main-select {
       width: 25vw;
       height: 2.5vw; } }
-
-.first-select {
-  margin-top: 5vh; }
 
 option {
   text-align: center;
   background-color: white; }
 
 .main-input {
-  margin-top: 5vh;
   width: 50vw;
   height: 4vw;
   border-radius: 50vw;
@@ -111,7 +131,7 @@ option {
   border: none;
   text-align: center;
   margin-bottom: 5vh; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
     .main-input {
       width: 25vw;
       height: 4vh;
@@ -131,7 +151,7 @@ option {
   font-size: 1.5em;
   border-radius: 10px;
   outline: none; }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     .main-submit {
       width: 25vw;
       height: 10vw;
@@ -141,9 +161,7 @@ option {
   font-weight: bold;
   color: red;
   font-size: 1.25em;
-  opacity: 0.9;
-  position: absolute;
-  top: 0; }
+  opacity: 0.9; }
 
 .Sent {
   display: -webkit-box;
@@ -173,3 +191,10 @@ option {
   border-radius: 5px;
   background-color: #4fd66e;
   color: white; }
+  @media screen and (min-width: 1000px) {
+    .button-sent {
+      position: absolute;
+      bottom: -10px; } }
+
+.hidden {
+  opacity: 0; }

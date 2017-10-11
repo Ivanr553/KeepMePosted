@@ -37,14 +37,35 @@ input::-webkit-inner-spin-button
   justify-content: center
   position: relative
 
+.container-right
+  @media screen and (min-width: 1000px)
+    margin-left: 3.5vw
+
+.form-container
+  @media screen and (min-width: 1000px)
+    background-color: rgba(0, 0, 0, 0.4)
+    margin-top: 7.5vh
+    border-radius: 10px
+
+.maring-top
+  margin-top:
+
 .InputForm
   display: flex
   flex-direction: column
+  @media screen and (min-width: 1000px)
+    flex-direction: row
   align-items: center
   justify-content: center
   width: 60vw
   margin-top: 5vh
-  // background-color: grey
+
+.form-titles
+  color: rgb(220,220,218)
+  font-size: 1.3em
+  width: 100%
+  text-indent: 15px
+  margin-bottom: 5px
 
 .main-select
   width: 50vw
@@ -56,19 +77,18 @@ input::-webkit-inner-spin-button
   background-color: rgb(255, 221, 130)
   border: none
   text-indent: 5px
-  @media screen and (min-width: 800px)
+  @media screen and (min-width: 1000px)
     width: 25vw
     height: 2.5vw
 
 .first-select
-  margin-top: 5vh
+  // margin-top: 5vh
 
 option
   text-align: center
   background-color: white
 
 .main-input
-  margin-top: 5vh
   width: 50vw
   height: 4vw
   border-radius: 50vw
@@ -77,7 +97,7 @@ option
   border: none
   text-align: center
   margin-bottom: 5vh
-  @media screen and (min-width: 800px)
+  @media screen and (min-width: 1000px)
     width: 25vw
     height: 4vh
     padding-left: 1vw
@@ -96,7 +116,7 @@ option
   font-size: 1.5em
   border-radius: 10px
   outline: none
-  @media screen and (max-width: 800px)
+  @media screen and (max-width: 1000px)
     width: 25vw
     height: 10vw
     font-size: 2em
@@ -106,8 +126,8 @@ option
   color: red
   font-size: 1.25em
   opacity: 0.9
-  position: absolute
-  top: 0
+  // position: absolute
+  // top: 0
 
 //Sent route styling
 .Sent
@@ -125,3 +145,9 @@ option
   border-radius: 5px
   background-color: rgb(79, 214, 110)
   color: white
+  @media screen and (min-width: 1000px)
+    position: absolute
+    bottom: -10px
+
+.hidden
+  opacity: 0

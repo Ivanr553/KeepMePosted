@@ -15,7 +15,7 @@ class InputForm extends Component {
     this.state = {
         subject: 'AB',
         year: 2018,
-        season: 'Spring',
+        season: 'Fall',
         crn: '',
         phone: '',
         showAlertText: false
@@ -91,9 +91,9 @@ class InputForm extends Component {
   render() {
 
     //Assigning null values for conditional text
-    let fillCrn = null
-    let fillPhone = null
-    let invalidForm = null
+    let fillCrn = <div className="alert-text hidden"> hidden</div>
+    let fillPhone = <div className="alert-text hidden"> hidden </div>
+    let invalidForm = <div className="alert-text hidden"> hidden </div>
 
     //Checking state for alert text display
 
@@ -123,29 +123,55 @@ class InputForm extends Component {
     }
 
     return (
-      <form className="InputForm">
+      <div className="container form-container">
+        <form className="InputForm">
 
-        <div className="container">
-        {invalidForm}
-        <SubjectSelect subject={this.state.subject} onStateChange={this.onStateChange} />
-        </div>
+          <div className="container">
 
-        <YearSelect year={this.state.year} onStateChange={this.onStateChange} />
+            <div className="container">
+              {invalidForm}
+              <div className="container margin-top">
+                <div className="form-titles">Select a subject</div>
+                <SubjectSelect subject={this.state.subject} onStateChange={this.onStateChange} />
+              </div>
+            </div>
 
-        <SeasonSelect season={this.state.season} onStateChange={this.onStateChange} />
+            <div className="container margin-top">
+            <div className="form-titles">Select a year</div>
+            <YearSelect year={this.state.year} onStateChange={this.onStateChange} />
+            </div>
 
-        <div className="container">
-        {fillCrn}
-        <CrnInput crn={this.state.crn} onStateChange={this.onStateChange} />
-        </div>
+            <div className="container margin-top">
+            <div className="form-titles">Select a term</div>
+            <SeasonSelect season={this.state.season} onStateChange={this.onStateChange} />
+            </div>
 
-        <div className="container">
-        {fillPhone}
-        <PhoneInput phone={this.state.phone} onStateChange={this.onStateChange} />
-        </div>
+          </div>
+
+          <div className="container container-right">
+
+            <div className="container">
+              {fillCrn}
+              <div className="container margin-top">
+              <div className="form-titles">Input the CRN for the class</div>
+              <CrnInput crn={this.state.crn} onStateChange={this.onStateChange} />
+              </div>
+            </div>
+
+            <div className="container">
+              {fillPhone}
+              <div className="container margin-top">
+              <div className="form-titles">A number to reach you at</div>
+              <PhoneInput phone={this.state.phone} onStateChange={this.onStateChange} />
+              </div>
+            </div>
+
+          </div>
+
+        </form>
 
         <button className="main-submit" onClick={(e) => this.handleButtonClick(e)} >Submit</button>
-      </form>
+      </div>
     )
   }
 }
