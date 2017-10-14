@@ -1,8 +1,8 @@
 {
-  "name": "react-node",
+  "name": "keep-me-posted",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A website application to allow users to track their waitlisted classes and to be notified when they are open through text message or email.",
+  "main": "server/server.js",
   "scripts": {
     "start": "node bin/www",
     "webpack": "webpack",

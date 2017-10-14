@@ -32,7 +32,6 @@ router.post('/request', (req, res) => {
     } else {
 
       //sent reponse to front end
-      console.log('no errors with data entry')
       return res.send({message: 'OK'})
     }
   })
