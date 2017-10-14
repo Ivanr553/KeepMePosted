@@ -15,7 +15,7 @@ class PhoneInput extends Component {
   render() {
     return (
       <div className='container'>
-      <input className="main-input" placeholder='phone' type='tel' name='phone' maxLength="10" onChange={this.handleChange} />
+      <input className="main-input" placeholder='Phone' type='tel' name='phone' maxLength="10" onChange={this.handleChange} />
       </div>
     )
   }

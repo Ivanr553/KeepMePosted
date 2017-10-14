@@ -2819,17 +2819,21 @@ var _styles = __webpack_require__(93);
 
 var _styles2 = _interopRequireDefault(_styles);
 
-var _Main = __webpack_require__(99);
+var _Main = __webpack_require__(98);
 
 var _Main2 = _interopRequireDefault(_Main);
 
-var _Sent = __webpack_require__(107);
+var _Sent = __webpack_require__(106);
 
 var _Sent2 = _interopRequireDefault(_Sent);
 
-var _NotSent = __webpack_require__(108);
+var _NotSent = __webpack_require__(107);
 
 var _NotSent2 = _interopRequireDefault(_NotSent);
+
+var _About = __webpack_require__(108);
+
+var _About2 = _interopRequireDefault(_About);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2859,7 +2863,8 @@ var App = function (_Component) {
           null,
           _react2.default.createElement(_reactRouterDom.Route, { path: '/', exact: true, component: _Main2.default }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/sent', exact: true, component: _Sent2.default }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/error', exact: true, component: _NotSent2.default })
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/error', exact: true, component: _NotSent2.default }),
+          _react2.default.createElement(_reactRouterDom.Route, { path: '/about', exact: true, component: _About2.default })
         )
       );
     }
@@ -27039,7 +27044,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(97)(content, options);
+var update = __webpack_require__(96)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -27064,7 +27069,7 @@ exports = module.exports = __webpack_require__(95)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  padding: 0;\n  margin: 0;\n  background-image: url(" + __webpack_require__(96) + ");\n  background-size: cover;\n  background-position: center; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 1.5vw;\n  opacity: 0.9; }\n\n.container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative; }\n\n@media screen and (min-width: 1000px) {\n  .container-right {\n    margin-left: 3.5vw; } }\n\n@media screen and (min-width: 1000px) {\n  .form-container {\n    background-color: rgba(0, 0, 0, 0.4);\n    margin-top: 7.5vh;\n    border-radius: 10px; } }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 60vw;\n  margin-top: 5vh; }\n  @media screen and (min-width: 1000px) {\n    .InputForm {\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n      -webkit-flex-direction: row;\n      -ms-flex-direction: row;\n      flex-direction: row; } }\n\n.form-titles {\n  color: #dcdcda;\n  font-size: 1.3em;\n  width: 100%;\n  text-indent: 15px;\n  margin-bottom: 5px; }\n\n.main-select {\n  width: 50vw;\n  height: 5vw;\n  font-size: 1em;\n  border-radius: 5px;\n  outline: none;\n  margin-bottom: 5vh;\n  background-color: #ffdd82;\n  border: none;\n  text-indent: 5px; }\n  @media screen and (min-width: 1000px) {\n    .main-select {\n      width: 25vw;\n      height: 2.5vw; } }\n\noption {\n  text-align: center;\n  background-color: white; }\n\n.main-input {\n  width: 50vw;\n  height: 4vw;\n  border-radius: 50vw;\n  padding-left: 2.5vw;\n  background-color: #ffdd82;\n  border: none;\n  text-align: center;\n  margin-bottom: 5vh; }\n  @media screen and (min-width: 1000px) {\n    .main-input {\n      width: 25vw;\n      height: 4vh;\n      padding-left: 1vw;\n      outline: none;\n      font-size: 1em; } }\n\n.main-submit {\n  background-color: #72a1ff;\n  border: none;\n  cursor: pointer;\n  margin-bottom: 5vh;\n  position: inherit;\n  width: auto;\n  height: auto;\n  padding: 10px 12.5px 10px 12.5px;\n  font-size: 1.5em;\n  border-radius: 10px;\n  outline: none; }\n  @media screen and (max-width: 1000px) {\n    .main-submit {\n      width: 25vw;\n      height: 10vw;\n      font-size: 2em; } }\n\n.alert-text {\n  font-weight: bold;\n  color: red;\n  font-size: 1.25em;\n  opacity: 0.9; }\n\n.Sent {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 75vh; }\n\n.button-sent {\n  padding: 1.5%;\n  font-size: 1.8em;\n  font-style: italic;\n  border-radius: 5px;\n  background-color: #4fd66e;\n  color: white; }\n  @media screen and (min-width: 1000px) {\n    .button-sent {\n      position: absolute;\n      bottom: -10px; } }\n\n.hidden {\n  opacity: 0; }\n", ""]);
+exports.push([module.i, "body {\n  padding: 0;\n  margin: 0;\n  background-color: #f0f0f0;\n  background-size: cover;\n  background-position: center; }\n\ninput::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0; }\n\n.Main {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  margin: 0;\n  padding: 0; }\n  @media screen and (max-width: 800px) {\n    .Main {\n      font-size: 0.8em; } }\n  @media screen and (max-width: 600px) {\n    .Main {\n      font-size: 0.65em; } }\n\n.Title {\n  font-size: 4em;\n  font-style: italic;\n  margin-top: 1.5vw;\n  color: #e1e8ed;\n  opacity: 0.9;\n  width: 100vw;\n  text-indent: 2.5vw;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -webkit-box-align: baseline;\n  -webkit-align-items: baseline;\n  -ms-flex-align: baseline;\n  align-items: baseline;\n  border-bottom: solid 1px lightgrey;\n  position: relative; }\n\n.title-small {\n  font-size: 0.67em;\n  margin-right: -2.5%;\n  color: #5fbed8; }\n\n.title-large {\n  margin-left: 0;\n  font-size: 0.9em;\n  color: #e88945;\n  font-style: normal;\n  font-weight: bold; }\n\n.about-link {\n  position: absolute;\n  right: 2.5%;\n  bottom: 10%;\n  font-size: 0.45em;\n  cursor: pointer;\n  color: #5fbed8; }\n  @media screen and (min-width: 1000px) {\n    .about-link {\n      -webkit-animation: aboutMouseLeave 0.4s forwards;\n      animation: aboutMouseLeave 0.4s forwards; } }\n\n@media screen and (min-width: 1000px) {\n  .about-link:hover {\n    -webkit-animation: aboutMouseEnter 0.4s forwards;\n    animation: aboutMouseEnter 0.4s forwards; } }\n\n.tagline {\n  position: absolute;\n  bottom: -40%;\n  left: 8%;\n  color: #646464;\n  font-size: 0.3em; }\n\n.container {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  position: relative; }\n\n@media screen and (min-width: 1000px) {\n  .container-right {\n    width: 45vw; } }\n\n@media screen and (min-width: 1000px) {\n  .container-left {\n    width: 45vw; } }\n\n@media screen and (min-width: 1000px) {\n  .form-container {\n    margin-top: 7.5vh;\n    border-radius: 10px; } }\n\n.margin-top {\n  margin-top: 1%; }\n\n.InputForm {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100vw;\n  margin-top: 5vh; }\n  @media screen and (min-width: 1000px) {\n    .InputForm {\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n      -webkit-flex-direction: row;\n      -ms-flex-direction: row;\n      flex-direction: row; } }\n\n.form-titles {\n  color: #dcdcda;\n  color: #5fbed8;\n  font-size: 1.3em;\n  width: 100%;\n  text-indent: 15px;\n  margin-bottom: 5px; }\n\n.main-select {\n  width: 50vw;\n  height: 5vw;\n  font-size: 1em;\n  border-radius: 5px;\n  outline: none;\n  margin-bottom: 5vh;\n  border: solid 1px #c8c8c8;\n  text-indent: 5px; }\n  @media screen and (min-width: 1000px) {\n    .main-select {\n      width: 25vw;\n      height: 2.5vw; } }\n\noption {\n  text-align: center;\n  background-color: white; }\n\n.main-input {\n  width: 50vw;\n  height: 4vw;\n  border-radius: 10px;\n  padding-left: 2.5vw;\n  background-color: #ffdd82;\n  background-color: #fcf3a6;\n  border: none;\n  text-align: center;\n  margin-bottom: 5vh; }\n  @media screen and (min-width: 1000px) {\n    .main-input {\n      width: 25vw;\n      height: 4vh;\n      padding-left: 1vw;\n      outline: none;\n      font-size: 1em; } }\n\n.main-input:focus {\n  background-color: white; }\n\n.main-submit {\n  background-color: #72a1ff;\n  background-color: #e88945;\n  background-color: #fcb17b;\n  border: none;\n  cursor: pointer;\n  margin-bottom: 5vh;\n  position: inherit;\n  width: auto;\n  height: auto;\n  padding: 1.5%;\n  font-size: 2em;\n  border-radius: 10px;\n  outline: none;\n  margin-top: 5vh;\n  color: white;\n  font-style: italic; }\n  @media screen and (max-width: 1000px) {\n    .main-submit {\n      width: 25vw;\n      height: 10vw;\n      font-size: 2em;\n      padding: 0; } }\n\n.alert-text {\n  font-weight: bold;\n  color: red;\n  font-size: 1.25em;\n  opacity: 0.9; }\n\n.Sent {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  width: 100%;\n  height: 75vh; }\n\n.button-sent {\n  padding: 1.5%;\n  font-size: 1.8em;\n  font-style: italic;\n  border-radius: 5px;\n  background-color: #4fd66e;\n  color: white; }\n  @media screen and (min-width: 1000px) {\n    .button-sent {\n      position: absolute;\n      bottom: -10px; } }\n\n.hidden {\n  opacity: 0; }\n\n@-webkit-keyframes aboutMouseEnter {\n  0% {\n    color: #5fbed8; }\n  100% {\n    color: #e88945; } }\n\n@keyframes aboutMouseEnter {\n  0% {\n    color: #5fbed8; }\n  100% {\n    color: #e88945; } }\n\n@-webkit-keyframes aboutMouseLeave {\n  0% {\n    color: #e88945; }\n  100% {\n    color: #5fbed8; } }\n\n@keyframes aboutMouseLeave {\n  0% {\n    color: #e88945; }\n  100% {\n    color: #5fbed8; } }\n", ""]);
 
 // exports
 
@@ -27155,12 +27160,6 @@ function toComment(sourceMap) {
 /* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "ec52fa1617a46e66bee0b696346bfb38.jpg";
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
@@ -27214,7 +27213,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(98);
+var	fixUrls = __webpack_require__(97);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -27530,7 +27529,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports) {
 
 
@@ -27625,7 +27624,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27641,11 +27640,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Title = __webpack_require__(100);
+var _Title = __webpack_require__(99);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _InputForm = __webpack_require__(101);
+var _InputForm = __webpack_require__(100);
 
 var _InputForm2 = _interopRequireDefault(_InputForm);
 
@@ -27684,7 +27683,7 @@ var Main = function (_Component) {
 exports.default = Main;
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27718,12 +27717,37 @@ var Title = function (_Component) {
   }
 
   _createClass(Title, [{
-    key: "render",
+    key: 'handleAboutClick',
+    value: function handleAboutClick() {
+      window.open(window.location.href + 'about', '_self');
+    }
+  }, {
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "Title" },
-        "Keep Me Posted"
+        'div',
+        { className: 'Title' },
+        _react2.default.createElement(
+          'div',
+          { className: 'title-small' },
+          ' KeepMe '
+        ),
+        ' ',
+        _react2.default.createElement(
+          'div',
+          { className: 'title-large' },
+          ' POSTED '
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'about-link', onClick: this.handleAboutClick },
+          'About Us'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'tagline' },
+          ' An app to keep you posted on your waitlisted classes '
+        )
       );
     }
   }]);
@@ -27734,7 +27758,7 @@ var Title = function (_Component) {
 exports.default = Title;
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27750,23 +27774,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SubjectSelect = __webpack_require__(102);
+var _SubjectSelect = __webpack_require__(101);
 
 var _SubjectSelect2 = _interopRequireDefault(_SubjectSelect);
 
-var _YearSelect = __webpack_require__(103);
+var _YearSelect = __webpack_require__(102);
 
 var _YearSelect2 = _interopRequireDefault(_YearSelect);
 
-var _SeasonSelect = __webpack_require__(104);
+var _SeasonSelect = __webpack_require__(103);
 
 var _SeasonSelect2 = _interopRequireDefault(_SeasonSelect);
 
-var _CrnInput = __webpack_require__(105);
+var _CrnInput = __webpack_require__(104);
 
 var _CrnInput2 = _interopRequireDefault(_CrnInput);
 
-var _PhoneInput = __webpack_require__(106);
+var _PhoneInput = __webpack_require__(105);
 
 var _PhoneInput2 = _interopRequireDefault(_PhoneInput);
 
@@ -27943,7 +27967,7 @@ var InputForm = function (_Component) {
           { className: 'InputForm' },
           _react2.default.createElement(
             'div',
-            { className: 'container' },
+            { className: 'container container-left' },
             _react2.default.createElement(
               'div',
               { className: 'container' },
@@ -27993,7 +28017,7 @@ var InputForm = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'form-titles' },
-                  'Input the CRN for the class'
+                  'Input the CRN number for the class'
                 ),
                 _react2.default.createElement(_CrnInput2.default, { crn: this.state.crn, onStateChange: this.onStateChange })
               )
@@ -28032,7 +28056,7 @@ var InputForm = function (_Component) {
 exports.default = InputForm;
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28664,7 +28688,7 @@ var SubjectSelect = function (_Component) {
 exports.default = SubjectSelect;
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28731,7 +28755,7 @@ var YearSelect = function (_Component) {
 exports.default = YearSelect;
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28803,7 +28827,7 @@ var SeasonSelect = function (_Component) {
 exports.default = SeasonSelect;
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28850,7 +28874,7 @@ var CrnInput = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'container' },
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'crn', type: 'tel', maxLength: '5', name: 'crn', onChange: this.handleChange })
+        _react2.default.createElement('input', { className: 'main-input', placeholder: 'CRN', type: 'tel', maxLength: '5', name: 'crn', onChange: this.handleChange })
       );
     }
   }]);
@@ -28861,7 +28885,7 @@ var CrnInput = function (_Component) {
 exports.default = CrnInput;
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28908,7 +28932,7 @@ var PhoneInput = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'container' },
-        _react2.default.createElement('input', { className: 'main-input', placeholder: 'phone', type: 'tel', name: 'phone', maxLength: '10', onChange: this.handleChange })
+        _react2.default.createElement('input', { className: 'main-input', placeholder: 'Phone', type: 'tel', name: 'phone', maxLength: '10', onChange: this.handleChange })
       );
     }
   }]);
@@ -28919,7 +28943,7 @@ var PhoneInput = function (_Component) {
 exports.default = PhoneInput;
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28978,7 +29002,7 @@ var Sent = function (_Component) {
 exports.default = Sent;
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29026,6 +29050,56 @@ var NotSent = function (_Component) {
 }(_react.Component);
 
 exports.default = NotSent;
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_Component) {
+  _inherits(About, _Component);
+
+  function About(props) {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
+  }
+
+  _createClass(About, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "About" },
+        "About Us Page"
+      );
+    }
+  }]);
+
+  return About;
+}(_react.Component);
+
+exports.default = About;
 
 /***/ })
 /******/ ]);

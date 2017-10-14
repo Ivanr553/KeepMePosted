@@ -126,7 +126,7 @@ class InputForm extends Component {
       <div className="container form-container">
         <form className="InputForm">
 
-          <div className="container">
+          <div className="container container-left">
 
             <div className="container">
               {invalidForm}
@@ -153,7 +153,7 @@ class InputForm extends Component {
             <div className="container">
               {fillCrn}
               <div className="container margin-top">
-              <div className="form-titles">Input the CRN for the class</div>
+              <div className="form-titles">Input the CRN number for the class</div>
               <CrnInput crn={this.state.crn} onStateChange={this.onStateChange} />
               </div>
             </div>

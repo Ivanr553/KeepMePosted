@@ -1,8 +1,8 @@
 body
   padding: 0
   margin: 0
-  background-image: url('./images/background.jpg')
-  // background-color: rgb(82, 178, 120)
+  // background-image: url('./images/background.jpg')
+  background-color: rgb(240, 240, 240)
   background-size: cover
   background-position: center
 
@@ -20,14 +20,61 @@ input::-webkit-inner-spin-button
   flex-direction: column
   align-items: center
   justify-content: center
+  margin: 0
+  padding: 0
+  @media screen and (max-width: 800px)
+    font-size: 0.8em
+  @media screen and (max-width: 600px)
+    font-size: 0.65em
 
 //Title for main page
 .Title
   font-size: 4em
   font-style: italic
   margin-top: 1.5vw
-  // color: rgb(255, 139, 10)
+  color: rgb(225, 232, 237)
   opacity: 0.9
+  width: 100vw
+  text-indent: 2.5vw
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: baseline
+  border-bottom: solid 1px lightgrey
+  position: relative
+
+.title-small
+  font-size: 0.67em
+  margin-right: -2.5%
+  color: rgb(95, 190, 216)
+
+.title-large
+  margin-left: 0
+  font-size: 0.9em
+  color: rgb(232, 137, 69)
+  font-style: normal
+  font-weight: bold
+
+.about-link
+  position: absolute
+  right: 2.5%
+  bottom: 10%
+  font-size: 0.45em
+  cursor: pointer
+  color: rgb(95, 190, 216)
+  @media screen and (min-width: 1000px)
+    animation: aboutMouseLeave 0.4s forwards
+
+.about-link:hover
+  @media screen and (min-width: 1000px)
+    animation: aboutMouseEnter 0.4s forwards
+
+.tagline
+  position: absolute
+  bottom: -40%
+  left: 8%
+  color: rgb(100, 100, 100)
+  font-size: 0.3em
 
 //Form styling
 .container
@@ -39,16 +86,19 @@ input::-webkit-inner-spin-button
 
 .container-right
   @media screen and (min-width: 1000px)
-    margin-left: 3.5vw
+    width: 45vw
+
+.container-left
+  @media screen and (min-width: 1000px)
+    width: 45vw
 
 .form-container
   @media screen and (min-width: 1000px)
-    background-color: rgba(0, 0, 0, 0.4)
     margin-top: 7.5vh
     border-radius: 10px
 
-.maring-top
-  margin-top:
+.margin-top
+  margin-top: 1%
 
 .InputForm
   display: flex
@@ -57,11 +107,12 @@ input::-webkit-inner-spin-button
     flex-direction: row
   align-items: center
   justify-content: center
-  width: 60vw
+  width: 100vw
   margin-top: 5vh
 
 .form-titles
   color: rgb(220,220,218)
+  color: rgb(95, 190, 216)
   font-size: 1.3em
   width: 100%
   text-indent: 15px
@@ -74,8 +125,8 @@ input::-webkit-inner-spin-button
   border-radius: 5px
   outline: none
   margin-bottom: 5vh
-  background-color: rgb(255, 221, 130)
-  border: none
+  // background-color: rgb(255, 221, 130)
+  border: solid 1px rgba(200, 200, 200, 1)
   text-indent: 5px
   @media screen and (min-width: 1000px)
     width: 25vw
@@ -91,9 +142,10 @@ option
 .main-input
   width: 50vw
   height: 4vw
-  border-radius: 50vw
+  border-radius: 10px
   padding-left: 2.5vw
   background-color: rgb(255, 221, 130)
+  background-color: rgb(252, 243, 166)
   border: none
   text-align: center
   margin-bottom: 5vh
@@ -104,22 +156,31 @@ option
     outline: none
     font-size: 1em
 
+.main-input:focus
+  background-color: white
+
 .main-submit
   background-color: rgb(114, 161, 255)
+  background-color: rgb(232, 137, 69)
+  background-color: rgb(252, 177, 123)
   border: none
   cursor: pointer
   margin-bottom: 5vh
   position: inherit
   width: auto
   height: auto
-  padding: 10px 12.5px 10px 12.5px
-  font-size: 1.5em
+  padding: 1.5%
+  font-size: 2em
   border-radius: 10px
   outline: none
+  margin-top: 5vh
+  color: white
+  font-style: italic
   @media screen and (max-width: 1000px)
     width: 25vw
     height: 10vw
     font-size: 2em
+    padding: 0
 
 .alert-text
   font-weight: bold
@@ -151,3 +212,17 @@ option
 
 .hidden
   opacity: 0
+
+
+//Animations
+@keyframes aboutMouseEnter
+  0%
+    color: rgb(95, 190, 216)
+  100%
+    color: rgb(232, 137, 69)
+
+@keyframes aboutMouseLeave
+  0%
+    color: rgb(232, 137, 69)
+  100%
+    color: rgb(95, 190, 216)

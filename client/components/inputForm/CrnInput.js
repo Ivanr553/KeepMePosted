@@ -15,7 +15,7 @@ class CrnInput extends Component {
   render() {
     return (
       <div className='container'>
-      <input className="main-input" placeholder='crn' type='tel' maxLength="5" name='crn' onChange={this.handleChange} />
+      <input className="main-input" placeholder='CRN' type='tel' maxLength="5" name='crn' onChange={this.handleChange} />
       </div>
     )
   }
