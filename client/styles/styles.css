@@ -3,7 +3,8 @@ body {
   margin: 0;
   background-color: #f0f0f0;
   background-size: cover;
-  background-position: center; }
+  background-repeat: no-repeat;
+  background-position: top right; }
 
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -12,6 +13,15 @@ input::-webkit-outer-spin-button {
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
+
+.mailbox-png {
+  width: 20vw;
+  height: 20vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-image: url("./images/mailbox-edit.png");
+  background-size: cover; }
 
 .Main {
   display: -webkit-box;
@@ -169,7 +179,6 @@ input::-webkit-inner-spin-button {
       flex-direction: row; } }
 
 .form-titles {
-  color: #dcdcda;
   color: #5fbed8;
   font-size: 1.3em;
   width: 100%;

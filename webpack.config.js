@@ -22,7 +22,7 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },
       {
-        test: /\.jpg$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'file-loader'
       }
     ]

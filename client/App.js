@@ -12,7 +12,8 @@ import About from './components/routes/About.js'
 class App extends Component {
   render() {
     return (
-      <BrowserRouter style={{backgroundImage: 'url(this.state.image)'}}>
+      <div>
+      <BrowserRouter>
         <Switch>
           <Route path='/' exact component={Main} />
           <Route path="/sent" exact component={Sent} />
@@ -20,6 +21,8 @@ class App extends Component {
           <Route path="/about" exact component={About} />
         </Switch>
       </BrowserRouter>
+      <div className="mailbox-png"></div>
+      </div>
     )
   }
 }

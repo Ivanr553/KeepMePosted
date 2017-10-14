@@ -1,10 +1,10 @@
 body
   padding: 0
   margin: 0
-  // background-image: url('./images/background.jpg')
   background-color: rgb(240, 240, 240)
   background-size: cover
-  background-position: center
+  background-repeat: no-repeat
+  background-position: top right
 
 input::-webkit-outer-spin-button
     -webkit-appearance: none
@@ -13,6 +13,16 @@ input::-webkit-outer-spin-button
 input::-webkit-inner-spin-button
   -webkit-appearance: none
   margin: 0
+
+//Mailbox background image
+.mailbox-png
+  width: 20vw
+  height: 20vw
+  position: fixed
+  bottom: 0
+  right: 0
+  background-image: url('./images/mailbox-edit.png')
+  background-size: cover
 
 //Main Component
 .Main
@@ -111,7 +121,6 @@ input::-webkit-inner-spin-button
   margin-top: 5vh
 
 .form-titles
-  color: rgb(220,220,218)
   color: rgb(95, 190, 216)
   font-size: 1.3em
   width: 100%
