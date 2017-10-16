@@ -25,7 +25,7 @@ app.engine('html', function(path, options, callbacks) {
 })
 
 //Static files
-app.use(express.static(path.join(__dirname, '../dist')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 //Routes
 app.use('/', indexRoute)
