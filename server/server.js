@@ -1,13 +1,13 @@
 //Packages
-let express = require('express')
-let fs = require('fs')
-let path = require('path')
-let mongoose = require('mongoose')
-let cors = require('cors')
-let bodyParser = require('body-parser')
+const express = require('express')
+const fs = require('fs')
+const path = require('path')
+const mongoose = require('mongoose')
+const cors = require('cors')
+const bodyParser = require('body-parser')
 
 //Initializing app
-let app = express()
+const app = express()
 
 //MiddleWare
 app.use(cors());
@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //Imports
-let indexRoute = require('./routes/index')
-let db = require('../config/database')
+const indexRoute = require('./routes/index')
+const db = require('../config/database')
 
 //View Engine
 app.set('view engine', 'html')
@@ -25,7 +25,7 @@ app.engine('html', function(path, options, callbacks) {
 })
 
 //Static files
-app.use(express.static(path.join(__dirname, '../client')))
+app.use(express.static(path.join(__dirname, '../dist')))
 
 //Routes
 app.use('/', indexRoute)
