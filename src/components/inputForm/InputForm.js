@@ -59,6 +59,7 @@ class InputForm extends Component {
     async function postRequest() {
       const response = await fetch('https://kmp-api.herokuapp.com/entry', {
         method: 'post',
+        mode: 'cors', 
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
