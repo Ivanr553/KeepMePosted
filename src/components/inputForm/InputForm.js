@@ -57,9 +57,8 @@ class InputForm extends Component {
 
     //Sending the information to the database and waiting for a proper response
     async function postRequest() {
-      const response = await fetch('https://kmp-api.herokuapp.com/entry', {
+      const response = await fetch('/api', {
         method: 'post',
-        mode: 'cors', 
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -71,16 +70,18 @@ class InputForm extends Component {
 
       let message = await response.json()
 
-      //Checking the response from the back end
-      if(message.status == 'OK') {
+      console.log(message)
 
-        // Opening the 'sent' page to notify user of a successful entry
-        window.open( window.location.href + 'sent', '_self')
-      } else {
-
-        //Showing user error with input
-        that.setState({showAlertText: true})
-      }
+      // //Checking the response from the back end
+      // if(message.status == 'OK') {
+      //
+      //   // Opening the 'sent' page to notify user of a successful entry
+      //   window.open( window.location.href + 'sent', '_self')
+      // } else {
+      //
+      //   //Showing user error with input
+      //   that.setState({showAlertText: true})
+      // }
     }
 
     postRequest()
