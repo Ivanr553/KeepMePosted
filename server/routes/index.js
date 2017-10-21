@@ -11,7 +11,7 @@ router.post('/api', async (req, res) => {
 
   let options = {
     method: 'POST',
-    url: 'http://localhost:8080/entry',
+    url: 'https://kmp-api.herokuapp.com/entry',
     body: req.body.newEntry,
     headers: {
       'Accept' : 'application/json',
