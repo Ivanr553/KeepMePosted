@@ -68,15 +68,13 @@ class InputForm extends Component {
         })
       })
 
-      let response = await response.json()
-
-      consle.log(response)
+      let message = await response.json()
 
       //Checking the response from the back end
-      if(response.status == 'OK') {
+      if(message.status == 'OK') {
 
         // Opening the 'sent' page to notify user of a successful entry
-        // window.open( window.location.href + 'sent', '_self')
+        window.open( window.location.href + 'sent', '_self')
       } else {
 
         //Showing user error with input
