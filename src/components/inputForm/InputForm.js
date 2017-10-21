@@ -14,7 +14,7 @@ class InputForm extends Component {
     //Initiation of state
     this.state = {
         subject: 'AB',
-        year: 2018,
+        year: '2018',
         season: 'Fall',
         crn: '',
         phone: '',
@@ -50,34 +50,33 @@ class InputForm extends Component {
     event.preventDefault()
 
     //Forming the correct structure for the database entry
-    let stateRequest = {
-      subject: this.state.subject,
-      year: this.state.year,
-      season: this.state.season,
-      crn: this.state.crn,
-      phone: this.state.phone
+    let newEntry = {
+      newClassID: this.state.subject + this.state.year + this.state.season + this.state.crn,
+      phone: String(this.state.phone)
     }
 
     //Sending the information to the database and waiting for a proper response
     async function postRequest() {
-      const response = await fetch('/request', {
-        method: 'POST',
+      const response = await fetch('https://kmp-api.herokuapp.com/entry', {
+        method: 'post',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          request: stateRequest
+          newEntry
         })
       })
 
-      let data = await response.json()
+      let response = await response.json()
+
+      consle.log(response)
 
       //Checking the response from the back end
-      if(data.message == 'OK') {
+      if(response.status == 'OK') {
 
         // Opening the 'sent' page to notify user of a successful entry
-        window.open( window.location.href + 'sent', '_self')
+        // window.open( window.location.href + 'sent', '_self')
       } else {
 
         //Showing user error with input

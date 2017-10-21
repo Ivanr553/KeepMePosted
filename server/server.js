@@ -16,7 +16,6 @@ app.use(bodyParser.json());
 
 //Imports
 const indexRoute = require('./routes/index')
-const db = require('../config/database')
 
 //View Engine
 app.set('view engine', 'html')
@@ -33,18 +32,6 @@ app.use('/', indexRoute)
 //Error handler
 app.use(function(err, req, res, next) {
   res.status(err.status || 500)
-})
-
-//Connect to database
-mongoose.connect(db.db)
-
-//Console logging connection
-mongoose.connection.on('connected', () => {
-  console.log('Connected to database')
-})
-
-mongoose.connection.on('error', (error) => {
-  console.log('There was an error connecting to the database: ' + error)
 })
 
 module.exports = app
