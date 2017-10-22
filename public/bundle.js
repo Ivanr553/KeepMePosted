@@ -27866,11 +27866,13 @@ var InputForm = function (_Component) {
 
       //Forming the correct structure for the database entry
       var newEntry = {
-        newClassID: this.state.subject + this.state.year + this.state.season + this.state.crn,
+        newClassID: this.state.subject + '.' + this.state.year + '.' + this.state.season + '.' + this.state.crn + '.',
         phone: String(this.state.phone)
 
         //Sending the information to the database and waiting for a proper response
       };async function postRequest() {
+
+        //Constructing request to back end
         var response = await fetch('/api', {
           method: 'post',
           headers: {
