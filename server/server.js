@@ -10,12 +10,9 @@ const bodyParser = require('body-parser')
 const app = express()
 
 //MiddleWare
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-//Imports
-const indexRoute = require('./routes/index')
+app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 //View Engine
 app.set('view engine', 'html')
@@ -25,6 +22,9 @@ app.engine('html', function(path, options, callbacks) {
 
 //Static files
 app.use(express.static(path.join(__dirname, '../public')))
+
+//Imports
+const indexRoute = require('./routes/index')
 
 //Routes
 app.use('/', indexRoute)

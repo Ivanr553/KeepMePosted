@@ -43,11 +43,13 @@ class InputForm extends Component {
 
   //Event handler for form submission
   handleButtonClick(event) {
+    event.preventDefault()
 
     let that = this
 
-    //Preventing defualt form submission for button
-    event.preventDefault()
+    if(this.state.crn === '' || this.state.phone === '' || this.state.crn.length < 5 || this.state.phone < 10) {
+      return that.setState({showAlertText: true})
+    }
 
     //Forming the correct structure for the database entry
     let newEntry = {
@@ -74,16 +76,16 @@ class InputForm extends Component {
 
       console.log(message)
 
-      // //Checking the response from the back end
-      // if(message.status == 'OK') {
-      //
-      //   // Opening the 'sent' page to notify user of a successful entry
-      //   window.open( window.location.href + 'sent', '_self')
-      // } else {
-      //
-      //   //Showing user error with input
-      //   that.setState({showAlertText: true})
-      // }
+      //Checking the response from the back end
+      if(message.responseStatus == 'OK') {
+
+        // Opening the 'sent' page to notify user of a successful entry
+        window.open( window.location.href + 'sent', '_self')
+      } else {
+
+        //Showing user error with input
+        that.setState({showAlertText: true})
+      }
     }
 
     postRequest()
