@@ -62,6 +62,8 @@ class InputForm extends Component {
 
       console.log(newEntry)
 
+
+
       //Constructing request to back end
       const response = await fetch('https://kmp-api.herokuapp.com/entry', {
         method: 'post',
