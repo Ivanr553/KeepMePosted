@@ -9,7 +9,8 @@ router.get('*', function (req, res) {
 });
 
 //Routing for posts to the api/database
-router.post('/api', async (req, res) => {             // DELETED async
+
+/*router.post('/api', async(req, res) => {             // DELETED async
 
   let options = {
     method: 'POST',
@@ -28,6 +29,6 @@ router.post('/api', async (req, res) => {             // DELETED async
 
   res.send(apiRes)
 
-})
+})*/
 
 module.exports = router;
