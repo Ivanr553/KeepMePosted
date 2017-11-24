@@ -9,7 +9,7 @@ router.get('*', function (req, res) {
 });
 
 //Routing for posts to the api/database
-router.post('/api', async (req, res) => {
+router.post('/api', async (req, res) => {             // DELETED async
 
   let options = {
     method: 'POST',
@@ -23,7 +23,7 @@ router.post('/api', async (req, res) => {
     json: true
   }
 
-  let apiRes = await request(options)
+  let apiRes = await request(options)       //   DELETED await
   console.log(apiRes)
 
   res.send(apiRes)
