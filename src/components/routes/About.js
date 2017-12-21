@@ -9,7 +9,7 @@ class About extends Component {
   render() {
     return(
       <div className="About">
-        This website is courtesy of Sergei Danielian, Ivan Raffuci and Alex Something.
+        This website is courtesy of Sergei Danielian, Ivan Raffucci and Alex Littua.
 
         Simply fill out the form and you will get a text notifiying you that you have been added to the system. When someone
         drops from a class or waitlist, you will be notified.
