@@ -10,7 +10,7 @@ class NotSent extends Component {
   render() {
     return (
       <div className="NotSent">
-        Something broke!
+        Something broke! Check back later!
       </div>
     )
   }
