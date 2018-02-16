@@ -8,6 +8,7 @@ import Main from './components/routes/Main.js'
 import Sent from './components/routes/Sent.js'
 import NotSent from './components/routes/NotSent.js'
 import About from './components/routes/About.js'
+import Statistics from './components/routes/Statistics.js'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/sent" exact component={Sent} />
           <Route path="/error" exact component={NotSent} />
           <Route path="/about" exact component={About} />
+          <Route path="/statistics" exact component={Statistics} />
         </Switch>
       </BrowserRouter>
       <div className="mailbox-png"></div>

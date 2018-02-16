@@ -27,7 +27,7 @@ class About extends Component {
 
 
       <div id="footer">
-      <p>This website is courtesy of Sergei Danielian.</p>
+      <p>This service is brought to you by Sergei Danielian.</p>
 
       <p>Questions? Concerns?<br/>
       Contact us at kmpsupp@gmail.com</p>

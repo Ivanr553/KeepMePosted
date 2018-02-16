@@ -122,6 +122,25 @@ input::-webkit-inner-spin-button {
     -webkit-animation: aboutMouseEnter 0.4s forwards;
     animation: aboutMouseEnter 0.4s forwards; } }
 
+
+.statistics-link {
+      position: absolute;
+      right: 15%;
+      bottom: 10%;
+      font-size: 0.45em;
+      cursor: pointer;
+      color: #5fbed8; }
+      @media screen and (min-width: 1000px) {
+        .statistics-link {
+          -webkit-animation: aboutMouseLeave 0.4s forwards;
+          animation: aboutMouseLeave 0.4s forwards; } }
+
+    @media screen and (min-width: 1000px) {
+      .statistics-link:hover {
+        -webkit-animation: aboutMouseEnter 0.4s forwards;
+        animation: aboutMouseEnter 0.4s forwards; } }
+
+
 .tagline {
   position: absolute;
   bottom: -40%;
