@@ -14,7 +14,7 @@ class InputForm extends Component {
     //Initiation of state
     this.state = {
         subject: 'AB',
-        year: '2018',
+        year: '2019',
         season: 'Fall',
         crn: '',
         phone: '',
