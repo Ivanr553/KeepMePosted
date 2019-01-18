@@ -16,7 +16,7 @@ class YearSelect extends Component {
     return (
       <select className='main-select' name='year' onChange={this.handleChange} value={this.props.year} >
         <option> 2019 </option>
-        <option> 2018 </option>
+        <option> 2020 </option>
       </select>
     )
   }
